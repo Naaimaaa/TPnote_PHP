@@ -1,0 +1,16 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                         %
+%                                 ENTITÉ                                  %
+%                                                                         %
+%  Pour créer une entité E, écrivez sur une ligne « E: ».                 %
+%  Bon à savoir : les lignes commençant par « % » sont des commentaires.  %
+%                                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+REPONSE: numR, libelle
+ASSOCIER, 0N QUESTION, 1N REPONSE : correcte
+QUESTION: numQ, intitule
+COMPOSER, 0N QUIZZ, 0N QUESTION
+QUIZZ : idQuizz, nomQuizz
+PARTICIPER, 0N QUIZZ, 0N UTILISATEUR: points
+UTILISATEUR: idU, nomU, prenomU
