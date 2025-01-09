@@ -1,9 +1,8 @@
 -- drop procedure
-
+DROP TRIGGER IF EXISTS addReponseQuestion;
 
 -- Vériication qu'au moins une réponse est correcte
-delimiter |
-CREATE OR REPLACE TRIGGER 
+
 
 
 
