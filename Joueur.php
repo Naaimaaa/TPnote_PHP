@@ -16,3 +16,4 @@ class Joueur{
         return $this->prenom;
     }
 }
+?>
