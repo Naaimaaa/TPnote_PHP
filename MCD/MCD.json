@@ -1,30 +1,30 @@
 {
-  "width": 770,
+  "width": 762,
   "height": 102,
   "cx": [
     [ "REPONSE", 43 ],
     [ "ASSOCIER", 148 ],
     [ "QUESTION", 257 ],
     [ "COMPOSER", 369 ],
-    [ "QUIZZ", 479 ],
-    [ "PARTICIPER", 591 ],
-    [ "UTILISATEUR", 714 ]
+    [ "QUIZ", 475 ],
+    [ "PARTICIPER", 583 ],
+    [ "UTILISATEUR", 706 ]
   ],
   "cy": [
     [ "REPONSE", 51 ],
     [ "ASSOCIER", 51 ],
     [ "QUESTION", 51 ],
     [ "COMPOSER", 51 ],
-    [ "QUIZZ", 51 ],
+    [ "QUIZ", 51 ],
     [ "PARTICIPER", 51 ],
     [ "UTILISATEUR", 51 ]
   ],
   "shift": [
     [ "ASSOCIER,QUESTION,0", 0 ],
     [ "ASSOCIER,REPONSE,0", 0 ],
-    [ "COMPOSER,QUIZZ,0", 0 ],
+    [ "COMPOSER,QUIZ,0", 0 ],
     [ "COMPOSER,QUESTION,0", 0 ],
-    [ "PARTICIPER,QUIZZ,0", 0 ],
+    [ "PARTICIPER,QUIZ,0", 0 ],
     [ "PARTICIPER,UTILISATEUR,0", 0 ]
   ],
   "ratio": []

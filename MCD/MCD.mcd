@@ -8,9 +8,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 REPONSE: numR, libelle
-ASSOCIER, 0N QUESTION, 1N REPONSE : correcte
+ASSOCIER, 0N QUESTION, 0N REPONSE : correcte
 QUESTION: numQ, intitule
-COMPOSER, 0N QUIZZ, 0N QUESTION
-QUIZZ : idQuizz, nomQuizz
-PARTICIPER, 0N QUIZZ, 0N UTILISATEUR: points
+COMPOSER, 0N QUIZ, 0N QUESTION
+QUIZ : idQuiz, nomQuiz
+PARTICIPER, 0N QUIZ, 0N UTILISATEUR: points, datePart
 UTILISATEUR: idU, nomU, prenomU
