@@ -32,7 +32,13 @@ class Quizz{
         return $this->lesQuestions;
     }
 
+    public function addQuestion(Question $question){
+        $this->lesQuestions[] = $question;
 
+    }
+
+    public function getJoueur(){
+        return $this->leJoueur;
+    }
 }
-
 ?>
