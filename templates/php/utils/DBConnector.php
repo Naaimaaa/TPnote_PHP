@@ -61,6 +61,20 @@ class DBConnector {
     }
 
     
+    /**
+     * get_participation, get l'ensemble des participations d'un utilisateur
+     *
+     * @return array la liste des participations
+     */
+    public function get_participation(string $emailU):array{
+        $sql = "SELECT * FROM QUIZ NATURAL JOIN PARTICIPER NATURAL JOIN UTILISATEUR WHERE EMAILU= ?;";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([$emailU]);
+        $questions = $stmt->fetchAll();
+        return $questions;
+    }
+
+    
 
 }
 
