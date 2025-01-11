@@ -13,4 +13,4 @@ QUESTION: numQ, intitule
 COMPOSER, 0N QUIZ, 0N QUESTION
 QUIZ : idQuiz, nomQuiz
 PARTICIPER, 0N QUIZ, 0N UTILISATEUR: points, datePart
-UTILISATEUR: idU, nomU, prenomU
+UTILISATEUR: emailU, nomU, prenomU

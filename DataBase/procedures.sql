@@ -1,11 +1,6 @@
 -- drop procedure
 DROP TRIGGER IF EXISTS addReponseQuestion;
 
--- Vériication qu'au moins une réponse est correcte
-
-
-
-
 
 -- Vérification qu'une question n'a pas de réponse en double
 delimiter |
