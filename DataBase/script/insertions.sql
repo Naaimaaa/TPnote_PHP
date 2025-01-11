@@ -1,18 +1,18 @@
 -- script d'insertions pour les tests
 -- génération data : https://generatedata.com/
 
-INSERT INTO UTILISATEUR (IDU, NOMU, PRENOMU)
+INSERT INTO UTILISATEUR (EMAILU, NOMU, PRENOMU)
 VALUES
-    (1,"Gay","Channing"),
-    (2,"Duncan","Valentine"),
-    (3,"Dean","Wade"),
-    (4,"Colon","Burke"),
-    (5,"Hendricks","Seth"),
-    (6,"Collins","Lamar"),
-    (7,"Pena","Alea"),
-    (8,"Nielsen","Odette"),
-    (9,"Hampton","Genevieve"),
-    (10,"Holland","Maisie");
+    ("s.georgia2866@outlook.couk","Simon","Georgia"),
+    ("gannon_gould@hotmail.edu","Gould","Gannon"),
+    ("m_macey7223@protonmail.net","Moss","Macey"),
+    ("george_frye7231@aol.edu","Frye","George"),
+    ("chambers_russell1853@protonmail.couk","Chambers","Russell"),
+    ("r-lavinia@icloud.org","Ramsey","Lavinia"),
+    ("ulysses-browning@yahoo.com","Browning","Ulysses"),
+    ("d-angelica3194@outlook.com","Davenport","Angelica"),
+    ("hardy.otto4636@yahoo.ca","Hardy","Otto"),
+    ("naomilamb@hotmail.edu","Lamb","Naomi");
 
 
 INSERT INTO QUIZ (IDQUIZ, NOMQUIZ)
@@ -21,16 +21,16 @@ VALUES
     (2,"VIVE LES VACANCES");
     
 
-INSERT INTO PARTICIPER (IDU, IDQUIZ, POINTS, DATEPART)
+INSERT INTO PARTICIPER (EMAILU, IDQUIZ, POINTS, DATEPART)
 VALUES
-    (8,1,24,"2024-08-26 16:44"),
-    (1,1,13,"2025-07-17 03:22"),
-    (3,2,17,"2024-01-06 15:35"),
-    (5,2,47,"2024-08-28 15:20"),
-    (3,2,28,"2025-06-07 15:33"),
-    (1,2,12,"2024-03-04 15:53"),
-    (9,1,44,"2024-10-30 16:08"),
-    (9,1,46,"2025-05-18 17:15");
+    ("s.georgia2866@outlook.couk",1,24,"2024-08-26 16:44"),
+    ("gannon_gould@hotmail.edu",1,13,"2025-07-17 03:22"),
+    ("m_macey7223@protonmail.net",2,17,"2024-01-06 15:35"),
+    ("george_frye7231@aol.edu",2,47,"2024-08-28 15:20"),
+    ("chambers_russell1853@protonmail.couk",2,28,"2025-06-07 15:33"),
+    ("hardy.otto4636@yahoo.ca",2,12,"2024-03-04 15:53"),
+    ("naomilamb@hotmail.edu",1,44,"2024-10-30 16:08"),
+    ("naomilamb@hotmail.edu",1,46,"2025-05-18 17:15");
 
 
 INSERT INTO QUESTION (NUMQ, INTITULE)
