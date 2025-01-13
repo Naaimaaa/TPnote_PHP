@@ -7,7 +7,12 @@ session_start();
 <!DOCTYPE html>
 <html lang="fr">
 <?php 
-include '../global/head.php'; 
-//link_to_css('../static/accueil.css');
 echo 'Hello World';
 ?>
+    <head>
+    <link rel='stylesheet' href="../static/index.css" >
+    </head>
+    <body>
+        <p>Hello<p>
+
+    </body>
