@@ -7,19 +7,19 @@ function providerJSON(String $fichier){
 
     $tableau = json_decode($donnee, true);
 
-    $resultat = array();
+    $quizz = array();
 
-    foreach($tableau['questions'] as $question){
+    foreach($tableau['QUIZZ'] as $question){
+        $questionTexte = $question['question'];
         $reponses = array();
         foreach($question['reponses'] as $rep){
-            $r = new Reponse($rep['proposition'],$rep['solution']);
+            $r = new Reponse($rep['proposition'],(bool)$rep['solution']);
             $reponses[] = $r;
         }
-        $quest = new Question($question['question'],$reponses);
-        $resultat[] = $quest;
+        $qst = new Question($questionTexte,$reponses);
+        $quizz[] = $qst;
     }
-    return $resultat;
+    return $quizz;
 }
-
-print_r(providerJSON("Data/QuestionReponse.json"));
 ?>
+
