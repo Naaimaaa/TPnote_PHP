@@ -1,5 +1,23 @@
 <style>
 
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 2 ;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 100px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
 </style>
 <header>
     <div class="logo">
