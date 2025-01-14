@@ -1,4 +1,5 @@
 <?php
+namespace quizz;
 class Quizz{
     private $nbQuestion;
     private $score;

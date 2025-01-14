@@ -1,4 +1,5 @@
 <?php
+namespace question;
 class Question{
     private $intituleQuest;
     private $lesReponses;

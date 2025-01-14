@@ -1,4 +1,5 @@
 <?php
+namespace reponse;
 class Reponse{
     private $intituleRep;
     private $bonneReponse;
