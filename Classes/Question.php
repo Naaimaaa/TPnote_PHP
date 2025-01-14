@@ -3,9 +3,9 @@ class Question{
     private $intituleQuest;
     private $lesReponses;
 
-    public function __construct(String $intitule){
+    public function __construct(String $intitule, Array $reponse){
         $this->intituleQuest = $intitule;
-        $this->lesReponses = array();
+        $this->lesReponses = $reponse;
     }
 
     public function getQuestion(){
