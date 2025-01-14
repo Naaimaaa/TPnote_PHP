@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
-namespace utils;
+namespace utils\DBConnector;
 use \PDO;
 
 class DBConnector {
     private $pdo;
     public function __construct($nombase, $dbuser, $dbpass){
-        // $this->pdo= new PDO('mysql:host=servinfo-maria;dbname='.$nombase.'', $dbuser, $dbpass);
-        $this->pdo= new PDO('mysql:host=localhost;dbname='.$nombase.'', $dbuser, $dbpass);
+        $this->pdo= new PDO('mysql:host=servinfo-maria;dbname='.$nombase.'', $dbuser, $dbpass);
+        //$this->pdo= new PDO('mysql:host=;dbname='.$nombase.'', $dbuser, $dbpass);
     }
     
     /**

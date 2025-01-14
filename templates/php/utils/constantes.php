@@ -1,7 +1,8 @@
 <?php
+namespace utils\constantes;
 require_once 'php/autoloader.php'; 
 Autoloader::register();
 use utils\DBConnector;
-$connexion = new DBConnector('TP_PHP', 'ophelieval', 'Ophelie$0110$');
+$connexion = new DBConnector('DBvalin', 'valin', 'valin');
 
 ?>
