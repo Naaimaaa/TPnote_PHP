@@ -1,6 +1,6 @@
 <?php
-require_once 'Classes/Question.php';
-require_once 'Classes/Reponse.php';
+use question\Question;
+use reponse\Reponse;
 
 function providerJSON(String $fichier){
     $donnee = file_get_contents($fichier);
