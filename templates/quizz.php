@@ -12,19 +12,20 @@ session_start();
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Quiz</title>
         <style>
-        <\/style>
+        </style>
     </head>
     <body>
         <?php
         $quizz = providerJSON("../Data/QuestionReponse.json");
         $index = 0;
-        foreach($quizz as $question){
+        $lesQuestions = $quizz->getLesQuestions();
+        foreach($lesQuestions as $question){
             echo "<br>";
             echo($question->getQuestion());
             echo "<br>";
             echo "<br>";
             foreach ($question->getLesReponses() as $reponse){
-                echo "<input type='radio' name='question" . $index . "' value='" . $reponse->getReponse() . "'> ";
+                echo "<input type='radio' name='question'" . $index . "'value='" . $reponse->getReponse() ." '> ";
                 echo("   " . $reponse->getReponse());
                 echo "<br>";
             }
