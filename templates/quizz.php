@@ -15,15 +15,18 @@ session_start();
     <body>
         <?php
         $quizz = providerJSON("../Data/QuestionReponse.json");
+        $index = 0;
         foreach($quizz as $question){
             echo "<br>";
             echo($question->getQuestion());
             echo "<br>";
             echo "<br>";
             foreach ($question->getLesReponses() as $reponse){
+                echo "<input type='radio' name='question" . $index . "' value='" . $reponse->getReponse() . "'> ";
                 echo("   " . $reponse->getReponse());
                 echo "<br>";
             }
+            $index++;
         }
         ?>
     </body>
