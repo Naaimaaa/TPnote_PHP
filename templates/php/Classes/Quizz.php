@@ -7,7 +7,7 @@ class Quizz{
     private $lesQuestions;
     private $leJoueur;
 
-    public function __construct(String $intitule){
+    public function __construct(String $intitule, $joueur = null){
         $this->intitule = $intitule;
         $this->nbQuestion = 5;
         $this->score = 0;

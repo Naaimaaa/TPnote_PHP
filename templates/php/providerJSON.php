@@ -10,7 +10,9 @@ function providerJSON(String $fichier){
     $tableau = json_decode($donnee, true);
 
     $quizz = array();
+    $intitule_quizz = array_key_first($tableau);
 
+    $quizz_obj = new \Classes\Quizz($intitule_quizz);
     foreach($tableau['QUIZZ'] as $question){
         $questionTexte = $question['question'];
         $reponses = array();
@@ -19,6 +21,7 @@ function providerJSON(String $fichier){
             $reponses[] = $r;
         }
         $qst = new Question($questionTexte,$reponses);
+        $quizz_obj->addQuestion($qst);
         $quizz[] = $qst;
     }
     return $quizz;
