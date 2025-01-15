@@ -15,9 +15,10 @@ session_start();
             background-color: #392989;
             color : white;
             width : 100%;
-            position : fixed;
-            top : 70px;
-            left: 0;
+            padding: 20px 0;
+            margin-top : 40px;
+            position : relative;
+            
         }
 
         .bienvenue h1 {
@@ -28,25 +29,32 @@ session_start();
         .bienvenue h3, 
         .recherche h3,
         .liste-quiz h3 {
-            font-size: 30px ;
-            margin : 0;
+            font-size: 30px;
+            margin : 10px 0;
         }
 
         .recherche {
-            position : fixed;
-            top : 50%;
-            left : 490px;
+            margin : 20px, auto;
+            width: 90%; /* Largeur relative */
+            max-width: 1000px; /* Limite maximale */
+            text-align: center;
+            margin-left : 17%;
+            margin-top : 20px;
         }
 
 
         .search-bar input {
             border-radius : 5px;
-            width : 1000px;
-            height : 30px;
+            width: 70%; /* Largeur relative */
+            max-width: 700px; /* Limite maximale */
+            height: 20px;
+            padding: 8px;
+            font-size: 16px;
 
         }
 
         .search-button {
+            margin-left: 10px;
             background-color: #CC3D6A;
             border-radius: 8px;
             border-style: none;
@@ -55,15 +63,14 @@ session_start();
             cursor: pointer;
             display: inline-block;
             font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 500;
             height: 40px;
             line-height: 20px;
             list-style: none;
             margin: 0;
             outline: none;
-            padding: 10px 16px;
-            position: relative;
+            padding: 10px 20px;
             text-align: center;
             text-decoration: none;
             transition: color 100ms;
@@ -75,18 +82,43 @@ session_start();
         }
 
         .liste-quiz {
-            position : fixed;
-            top : 75%; quizz
+            margin-left: 20px;
+            
         }
         
         hr {
-            width : 400%;
+            width : 20%;
+            margin-top : 60px;
         }
 
 
         .search-button:hover,
         .search-button:focus {
             background-color: #F082AC;
+        }
+
+        @media (max-width: 768px) {
+            .search-bar input {
+                width: 60%; /* Réduction pour écrans moyens */
+                font-size: 14px;
+            }
+
+            .search-button {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .search-bar input {
+                width: 80%; /* Réduction pour petits écrans */
+                font-size: 12px;
+            }
+
+            .search-button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
         }
 
 
@@ -102,15 +134,15 @@ session_start();
             <section class="recherche">
                 <h3>Rechercher un quiz</h3>
                 <form action="recherche.php" method="GET" class="search-bar">
-                    <input type="text" name="query" placeholder="  voyage, disney, harry potter..." class="search-input" required>
+                    <input type="text" name="query" placeholder=" voyage, disney, harry potter..." class="search-input" required>
                     <button type="submit" class="search-button">OK</button>
                 </form>
                     
                 
             </section>
+            <hr/>
             <section class="liste-quiz">
-                <h3> Nos derniers quizz </h3>
-                <hr/>
+                <h3> Nos derniers quiz </h3>
                 <?php 
                 $i = 0;
                 foreach($quizs as $quiz){
@@ -129,5 +161,3 @@ session_start();
         </main>
 
 
-        #240638
-        #691076
