@@ -1,7 +1,8 @@
 <?php
 
-require_once 'templates/php/providerJSON.php';
-
+require_once 'php/providerJSON.php';
+use Classes\Question;
+use Classes\Reponse;
 session_start();
 ?>
 <!DOCTYPE html>
@@ -13,12 +14,15 @@ session_start();
     </head>
     <body>
         <?php
-        $quizz = providerJSON("../../Data/QuestionReponse.json");
-
-        foreach ($quizz as $question){
-            echo $question;
-            foreach ($question as $reponse){
-                echo $reponse;
+        $quizz = providerJSON("../Data/QuestionReponse.json");
+        foreach($quizz as $question){
+            echo "<br>";
+            echo($question->getQuestion());
+            echo "<br>";
+            echo "<br>";
+            foreach ($question->getLesReponses() as $reponse){
+                echo("   " . $reponse->getReponse());
+                echo "<br>";
             }
         }
         ?>
