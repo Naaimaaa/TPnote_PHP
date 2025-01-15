@@ -23,20 +23,23 @@ session_start();
 
         echo("<h1>$titre</h1>\n");
 
-        $index = 0;
+        echo "<form method='post'>";
+            $index = 0;
 
-        foreach($lesQuestions as $question){
-            echo "<br>";
-            echo($question->getQuestion());
-            echo "<br>";
-            echo "<br>";
-            foreach ($question->getLesReponses() as $reponse){
-                echo "<input type='radio' name='question'" . $index . "'value='" . $reponse->getReponse() ." '> ";
-                echo("   " . $reponse->getReponse());
+            foreach($lesQuestions as $question){
                 echo "<br>";
+                echo($question->getQuestion());
+                echo "<br>";
+                echo "<br>";
+                foreach ($question->getLesReponses() as $reponse){
+                    echo "<input type='radio' name='question$index' . value='" . $reponse->getReponse() . "'> ";
+                    echo("   " . $reponse->getReponse());
+                    echo "<br>";
+                }
+                $index++;
             }
-            $index++;
-        }
+            echo "<button type='submit'>Vérifier</button>";
+        echo "</form>";
         ?>
     </body>
 </html>
