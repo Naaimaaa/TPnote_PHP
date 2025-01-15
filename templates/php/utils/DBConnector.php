@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-namespace utils\DBConnector;
+namespace utils;
 use \PDO;
 
 class DBConnector {
@@ -66,7 +66,7 @@ class DBConnector {
      *
      * @return array la liste des participations
      */
-    public function get_participation(string $emailU):array{
+    public function get_participations(string $emailU):array{
         $sql = "SELECT * FROM QUIZ NATURAL JOIN PARTICIPER NATURAL JOIN UTILISATEUR WHERE EMAILU= ?;";
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([$emailU]);

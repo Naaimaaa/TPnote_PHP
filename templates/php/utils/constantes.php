@@ -1,6 +1,10 @@
 <?php
 namespace utils\constantes;
-require_once 'php/autoloader.php'; 
+try { require_once 'php/autoloader.php'; 
+}
+catch (Exception $e){
+    require_once '../constantes.php';
+}
 Autoloader::register();
 use utils\DBConnector;
 $connexion = new DBConnector('DBvalin', 'valin', 'valin');
