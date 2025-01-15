@@ -1,9 +1,10 @@
 <?php
+namespace Classes;
 class Reponse{
     private $intituleRep;
     private $bonneReponse;
 
-    public function __construct(String $intitule, Boolean $bonneRep){
+    public function __construct(String $intitule, bool $bonneRep){
         $this->intituleRep = $intitule;
         $this->bonneReponse = $bonneRep;
     }

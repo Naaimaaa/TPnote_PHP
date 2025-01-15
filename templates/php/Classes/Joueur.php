@@ -1,4 +1,5 @@
 <?php
+namespace Classes;
 class Joueur{
     private $nom;
     private $prenom;
