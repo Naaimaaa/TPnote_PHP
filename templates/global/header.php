@@ -11,7 +11,7 @@
         align-items: center;
         padding: 10px 20px;
         margin : 0;
-        background-color : #43319d;
+        background-color : #691076;
         width : 100%;
         position : fixed;
         top : 0;
@@ -26,7 +26,33 @@
         height : 10px;
         width : auto;
         margin: 10px 80px; 
-        background-color : #392989;
+        
+    }
+
+    a:hover {
+        font-weight : bold;
+    }
+
+
+
+
+    @media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+    .user-space, .logo {
+        margin: 0 auto;
+    }
+    }
+
+    .user-space {
+        display: flex;
+        align-items: stretch;
+    }
+
+    .user-space img {
+        height : 50px;
+        width : auto;
     }
     
 
@@ -43,7 +69,7 @@
         <a href="#"> Contact </a>
     </nav>
     <div class="user-space">
-        <img src="#" alt="icone-user">
+        <img src="img/user.webp" alt="icone-user">
         <a href="#"> Mon compte</a>
     </div>
 </header>
