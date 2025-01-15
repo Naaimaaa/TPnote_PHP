@@ -13,7 +13,7 @@ session_start();
     </head>
     <body>
         <?php
-        $quizz = providerJSON("../../Data/QuestionReponse.json");
+        $quizz = providerJSON("../Data/QuestionReponse.json");
 
         foreach ($quizz as $question){
             echo $question;

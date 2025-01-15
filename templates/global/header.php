@@ -68,7 +68,7 @@ namespace global\header
         </a>
        </div>
     <nav>
-        <a href="#"> Statistiques </a>
+        <a href="../statistiques.php"> Statistiques </a>
         <a href="#"> Mes quiz </a>
         <a href="#"> Contact </a>
     </nav>
