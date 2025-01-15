@@ -18,20 +18,25 @@ session_start();
         <?php
         $quizz = providerJSON("../Data/QuestionReponse.json");
 
+        if (!isset($_SESSION['score'])) {
+            $_SESSION['score'] = 0;
+        }
+
         $titre = $quizz->getQuizz();
         echo("<h1>$titre</h1>\n");
 
-        if (isset($_POST['nbQuestions'])){
+        if (isset($_POST['nbQuestions']) && $_POST['nbQuestions'] > 0){
             $nbQuestion = $_POST['nbQuestions'];
             $quizz->setNbQuestions($nbQuestion);
         }
-
+        
         $lesQuestions = $quizz->getLesQuestions();
         echo "<form method='post'>";
             echo "<label for='nbQuestions'>Nombre de questions (5 par défaut) :</label><br>";
-            echo "<input type='number' id='nbQuestions' name='nbQuestions' min='1' value='" . $nbQuestion . "' max='" . count($lesQuestions) . "'>";
+            echo "<input type='number' id='nbQuestions' name='nbQuestions' min='1' value='" . $_POST['nbQuestions'] . "' max='" . count($lesQuestions) . "'>";
             echo "<button type='submit'>Valider</button>";
         echo "</form><br>";
+
 
         $nbQuestion = $quizz->getNbQuestions();
 
@@ -52,8 +57,23 @@ session_start();
                 }
                 $index++;
             }
-            echo "<button type='submit'>Vérifier</button>";
+
+            echo "<button type='submit'>Vérifier pour voir votre score</button>";
         echo "</form>";
+
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            foreach ($lesQuestions as $question) {
+                foreach ($question as $reponse){
+                    if (($_POST["question$index"] == $reponse) && ($reponse->bonneReponse())){
+                        $_SESSION['score']++;
+                        $quizz->setScore($score);
+                    }
+                }
+            }
+
+        }
+
         ?>
     </body>
 </html>
