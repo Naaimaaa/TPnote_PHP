@@ -12,7 +12,7 @@ session_start();
     <style>
         .bienvenue {
             text-align: center;
-            background-color: #240638;
+            background-color: #392989;
             color : white;
             width : 100%;
             position : fixed;
@@ -76,10 +76,9 @@ session_start();
 
         .liste-quiz {
             position : fixed;
-            top : 75%;
-            left : 10%;
+            top : 75%; quizz
         }
-
+        
         hr {
             width : 400%;
         }
@@ -94,10 +93,10 @@ session_start();
     </style>
     <body>
         <?php include('global/header.php'); ?>
-        <title>Let's Quiz - Accueil</title>
+        <title>Let's Quizz - Accueil</title>
         <main>
             <div class="bienvenue">
-                <h1> Bienvenue sur Let's Quiz !</h1>
+                <h1> Bienvenue sur Let's Quizz !</h1>
                 <h3> La meilleure plateforme de quiz en ligne</h3>
             </div>
             <section class="recherche">

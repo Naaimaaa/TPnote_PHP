@@ -19,8 +19,8 @@ session_start();
             padding: 0;
             color: #333;
             display: flex;
-            justify-content: center; 
-            align-items: center;  
+            justify-content: center;
+            align-items: center;
             height: 100vh;
             overflow : hidden;
         }
@@ -91,7 +91,7 @@ session_start();
         <source src="img/video/bubbles.mov" type="video/quicktime">
     </video>
     <main>
-        <h1> Let's QUIZ !</h1>
+        <h1> Let's QUIZZ !</h1>
         <section class="container">
             <h2>Testez vos connaissances !</h2>
             <p>Êtes-vous prêt à relever le défi ? Cliquez sur le bouton ci-dessous pour démarrer l'aventure.</p>

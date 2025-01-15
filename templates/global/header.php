@@ -1,3 +1,7 @@
+<?php
+namespace global\header
+?>
+
 <style>
 
     body {
@@ -11,7 +15,7 @@
         align-items: center;
         padding: 10px 20px;
         margin : 0;
-        background-color : #691076;
+        background-color : #43319D;
         width : 100%;
         position : fixed;
         top : 0;
