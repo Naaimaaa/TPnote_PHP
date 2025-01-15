@@ -20,13 +20,16 @@ session_start();
 
         $titre = $quizz->getQuizz();
         $lesQuestions = $quizz->getLesQuestions();
-
+        //$nbQuestion = $quizz->getNbQuestions();
+        $nbQuestion = 2;
         echo("<h1>$titre</h1>\n");
 
         echo "<form method='post'>";
             $index = 0;
-
             foreach($lesQuestions as $question){
+                if ($index == $nbQuestion){
+                    break;
+                }
                 echo "<br>";
                 echo($question->getQuestion());
                 echo "<br>";
@@ -38,6 +41,7 @@ session_start();
                 }
                 $index++;
             }
+
             echo "<button type='submit'>Vérifier</button>";
         echo "</form>";
         ?>
