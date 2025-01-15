@@ -19,10 +19,21 @@ session_start();
         $quizz = providerJSON("../Data/QuestionReponse.json");
 
         $titre = $quizz->getQuizz();
-        $lesQuestions = $quizz->getLesQuestions();
-        //$nbQuestion = $quizz->getNbQuestions();
-        $nbQuestion = 2;
         echo("<h1>$titre</h1>\n");
+
+        if (isset($_POST['nbQuestions'])){
+            $nbQuestion = $_POST['nbQuestions'];
+            $quizz->setNbQuestions($nbQuestion);
+        }
+
+        $lesQuestions = $quizz->getLesQuestions();
+        echo "<form method='post'>";
+            echo "<label for='nbQuestions'>Nombre de questions (5 par défaut) :</label><br>";
+            echo "<input type='number' id='nbQuestions' name='nbQuestions' min='1' value='" . $nbQuestion . "' max='" . count($lesQuestions) . "'>";
+            echo "<button type='submit'>Valider</button>";
+        echo "</form><br>";
+
+        $nbQuestion = $quizz->getNbQuestions();
 
         echo "<form method='post'>";
             $index = 0;
@@ -41,7 +52,6 @@ session_start();
                 }
                 $index++;
             }
-
             echo "<button type='submit'>Vérifier</button>";
         echo "</form>";
         ?>
