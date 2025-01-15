@@ -1,6 +1,8 @@
 <?php
-use question\Question;
-use reponse\Reponse;
+require_once 'autoloader.php';
+Autoloader::register();
+use Classes\Question;
+use Classes\Reponse;
 
 function providerJSON(String $fichier){
     $donnee = file_get_contents($fichier);

@@ -1,5 +1,5 @@
 <?php
-namespace reponse;
+namespace Classes;
 class Reponse{
     private $intituleRep;
     private $bonneReponse;
