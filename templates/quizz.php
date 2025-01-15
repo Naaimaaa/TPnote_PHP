@@ -17,8 +17,14 @@ session_start();
     <body>
         <?php
         $quizz = providerJSON("../Data/QuestionReponse.json");
-        $index = 0;
+
+        $titre = $quizz->getQuizz();
         $lesQuestions = $quizz->getLesQuestions();
+
+        echo("<h1>$titre</h1>\n");
+
+        $index = 0;
+
         foreach($lesQuestions as $question){
             echo "<br>";
             echo($question->getQuestion());
