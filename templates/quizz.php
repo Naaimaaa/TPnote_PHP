@@ -22,6 +22,10 @@ session_start();
             $_SESSION['score'] = 0;
         }
 
+        if (!isset($_POST['nbQuestions'])) {
+            $_POST['nbQuestions'] = 5;
+        }
+
         $titre = $quizz->getQuizz();
         echo("<h1>$titre</h1>\n");
 
@@ -40,7 +44,7 @@ session_start();
 
         $nbQuestion = $quizz->getNbQuestions();
 
-        echo "<form method='post'>";
+        echo "<form method='POST' action='resultat.php'>";
             $index = 0;
             foreach($lesQuestions as $question){
                 if ($index == $nbQuestion){
@@ -57,32 +61,8 @@ session_start();
                 }
                 $index++;
             }
-
-            echo "<button type='submit'>Vérifier pour voir votre score</button>";
+            echo "<input type='submit' value='Cliquez pour voir votre résultat'/>";
         echo "</form>";
-
-
-        if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-            $index = 0;
-            foreach ($lesQuestions as $question){
-                if ($index >= $nbQuestion){
-                    break;
-                }
-                if(isset($_POST["question$index"])){
-                    $repJoueur = $_POST["question$index"];
-                    foreach ($question->getLesReponses() as $reponse){
-                        if ($repJoueur == $reponse->getReponse() && $reponse->bonneReponse()){
-                            $_SESSION['score']++;
-                            $quizz->setScore($_SESSION['score']);
-                        }
-                    }
-                }
-                $index++;
-            }
-        }
-        echo "<h2>Votre score : <br>"; 
-        echo ($_SESSION['score']);
-        $_SESSION['score'] = 0;
         ?>
     </body>
 </html>
