@@ -61,6 +61,20 @@ class UserTools {
     public static function getUserToken() {
         return $_SESSION['user']['token'];
     }
+
+    public static function register($email, $password, $nom, $prenom) {
+        $user = self::checkDB($email, $password);
+        if(!$user) {
+            $db = new PDO('mysql:host=servinfo-maria;dbname=DBvalin', 'valin', 'valin');
+            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $hash = hash('sha1', $password);
+            $query = $db->prepare('INSERT INTO UTILISATEUR VALUES(:email, :passwrd ,:nom, :prenom');
+            $query->execute(array('email' => $email, 'password' => $hash, 'nom' => $nom, 'prenom' => $prenom));
+        }
+        else {
+            echo "Une erreur s'est produite lors de la tentive d'ajout d'un utilisateur, vérifiez que cet utilisateur n'existe pas déjà";
+        }
+    }
 }
 
 

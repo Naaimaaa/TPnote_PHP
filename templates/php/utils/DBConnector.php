@@ -48,7 +48,7 @@ class DBConnector {
 
 
 
-   /**
+    /**
      * get_quiz, get l'ensemble des quiz de la BD
      *
      * @return array la liste des quizs
@@ -75,8 +75,8 @@ class DBConnector {
         $sql = "SELECT * FROM QUIZ NATURAL JOIN PARTICIPER NATURAL JOIN UTILISATEUR WHERE EMAILU= ?;";
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([$emailU]);
-        $questions = $stmt->fetchAll();
-        return $questions;
+        $participations = $stmt->fetchAll();
+        return $participations;
     }
 
     
