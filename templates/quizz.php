@@ -51,7 +51,7 @@ session_start();
                 echo "<br>";
                 echo "<br>";
                 foreach ($question->getLesReponses() as $reponse){
-                    echo "<input type='radio' name='question$index' . value='" . $reponse->getReponse() . "'> ";
+                    echo "<input type='radio' name='question$index' value='" . $reponse->getReponse() . "'> ";
                     echo("   " . $reponse->getReponse());
                     echo "<br>";
                 }
@@ -62,18 +62,27 @@ session_start();
         echo "</form>";
 
 
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            foreach ($lesQuestions as $question) {
-                foreach ($question as $reponse){
-                    if (($_POST["question$index"] == $reponse) && ($reponse->bonneReponse())){
-                        $_SESSION['score']++;
-                        $quizz->setScore($score);
+        if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $index = 0;
+            foreach ($lesQuestions as $question){
+                if ($index >= $nbQuestion){
+                    break;
+                }
+                if(isset($_POST["question$index"])){
+                    $repJoueur = $_POST["question$index"];
+                    foreach ($question->getLesReponses() as $reponse){
+                        if ($repJoueur == $reponse->getReponse() && $reponse->bonneReponse()){
+                            $_SESSION['score']++;
+                            $quizz->setScore($_SESSION['score']);
+                        }
                     }
                 }
+                $index++;
             }
-
         }
-
+        echo "<h2>Votre score : <br>"; 
+        echo ($_SESSION['score']);
+        $_SESSION['score'] = 0;
         ?>
     </body>
 </html>
