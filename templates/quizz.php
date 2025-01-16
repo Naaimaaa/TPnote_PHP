@@ -45,7 +45,7 @@ session_start();
 
         $nbQuestion = $quizz->getNbQuestions();
 
-        echo "<form method='POST' action='resultat.php'>";
+        echo "<form method='POST' action='resultat'>";
             $index = 0;
             foreach($lesQuestions as $question){
                 if ($index == $nbQuestion){
