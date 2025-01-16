@@ -1,18 +1,19 @@
 -- script d'insertions pour les tests
 -- génération data : https://generatedata.com/
 
-INSERT INTO UTILISATEUR (EMAILU, NOMU, PRENOMU)
+INSERT INTO UTILISATEUR (EMAILU, PASSWRD, NOMU, PRENOMU)
 VALUES
-    ("s.georgia2866@outlook.couk","Simon","Georgia"),
-    ("gannon_gould@hotmail.edu","Gould","Gannon"),
-    ("m_macey7223@protonmail.net","Moss","Macey"),
-    ("george_frye7231@aol.edu","Frye","George"),
-    ("chambers_russell1853@protonmail.couk","Chambers","Russell"),
-    ("r-lavinia@icloud.org","Ramsey","Lavinia"),
-    ("ulysses-browning@yahoo.com","Browning","Ulysses"),
-    ("d-angelica3194@outlook.com","Davenport","Angelica"),
-    ("hardy.otto4636@yahoo.ca","Hardy","Otto"),
-    ("naomilamb@hotmail.edu","Lamb","Naomi");
+    ("vo@gmail.com", "oooo", "Valin", "Ophélie"),
+    ("s.georgia2866@outlook.couk", "1","Simon","Georgia"),
+    ("gannon_gould@hotmail.edu","1","Gould","Gannon"),
+    ("m_macey7223@protonmail.net","1","Moss","Macey"),
+    ("george_frye7231@aol.edu","1","Frye","George"),
+    ("chambers_russell1853@protonmail.couk","1","Chambers","Russell"),
+    ("r-lavinia@icloud.org","1","Ramsey","Lavinia"),
+    ("ulysses-browning@yahoo.com","1","Browning","Ulysses"),
+    ("d-angelica3194@outlook.com","1","Davenport","Angelica"),
+    ("hardy.otto4636@yahoo.ca","1","Hardy","Otto"),
+    ("naomilamb@hotmail.edu","1","Lamb","Naomi");
 
 
 INSERT INTO QUIZ (IDQUIZ, NOMQUIZ)

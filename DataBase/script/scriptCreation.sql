@@ -1,6 +1,6 @@
 -- create new schema
-create database if not exists TP_PHP;
-use TP_PHP;
+-- create database if not exists TP_PHP;
+-- use TP_PHP;
 
 -- Script de création de la base de données
 DROP TABLE IF EXISTS PARTICIPER;

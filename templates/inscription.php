@@ -1,3 +1,21 @@
+<?php 
+session_start();
+require_once 'php/autoloader.php';
+Autoloader::register();
+use utils\UserTools;
+if (!empty($_POST['email']) && !empty($_POST['password'])) {
+    $login = UserTools::login($_POST['email'], $_POST['password']);
+    if ($login == true) {
+        header('Location : accueil.php');
+        } else {
+        header('Location : accueil.php?error=1');
+        }
+
+}
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <?php include('global/head.php'); ?>

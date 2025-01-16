@@ -6,12 +6,12 @@ use utils\UserTools;
 if (!empty($_POST['email']) && !empty($_POST['password'])) {
     $login = UserTools::login($_POST['email'], $_POST['password']);
     if ($login == true) {
-        header('Location : ../accueil.php');
+        header('Location : accueil.php');
         } else {
         header('Location : accueil.php?error=1');
         }
 
-} 
+}
 
 else if (!empty($_POST['login']) || !empty($_POST['password'])) {
     header('Location: connexion.php?error=2');
