@@ -1,5 +1,5 @@
 <?php
-namespace global\header
+namespace global\headerCo
 ?>
 
 <style>
@@ -169,8 +169,7 @@ namespace global\header
         <a href="#"> Contact </a>
     </nav>
     <div id="mon-compte" >
-        <div><a href="connexion.php">Se connecter</a></div>
-        <div><a href="inscription.php">S'inscrire</a></div>
+        <div><a href="accueil.php">Se déconnecter</a></div>
         <div><a href="#">Aide</a></div>
     </div>
     <div class="user-space" onclick="menuDisplay()">
