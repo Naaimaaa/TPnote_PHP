@@ -14,6 +14,7 @@ session_start();
     </head>
     <body>
         <?php
+        $page = 'resultat.php';
         $quizz = providerJSON("../Data/QuestionReponse.json");
         $lesQuestions = $quizz->getLesQuestions();
 

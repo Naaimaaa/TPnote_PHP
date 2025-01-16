@@ -16,6 +16,7 @@ session_start();
     </head>
     <body>
         <?php
+        $page = 'quizz.php';
         $quizz = providerJSON("../Data/QuestionReponse.json");
 
         if (!isset($_SESSION['score'])) {
@@ -63,6 +64,7 @@ session_start();
             }
             echo "<input type='submit' value='Cliquez pour voir votre résultat'/>";
         echo "</form>";
+
         ?>
     </body>
 </html>
