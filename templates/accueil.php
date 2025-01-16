@@ -3,7 +3,7 @@ session_start();
 require_once 'php/autoloader.php';
 Autoloader::register();
 use utils\UserTools;
-UserTools::requireLogin();
+//UserTools::requireLogin();
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +12,7 @@ UserTools::requireLogin();
     include 'global/head.php';
 ?>
     <style>
+
         .bienvenue {
             text-align: center;
             background-color: #392989;
@@ -39,10 +40,8 @@ UserTools::requireLogin();
             margin : 20px, auto;
             width: 90%; /* Largeur relative */
             max-width: 1000px; /* Limite maximale */
-            text-align: center;
-            margin-left : 17%;
+            margin-left : 6rem;
             margin-top : 20px;
-            align-items : center;
         }
 
 
@@ -85,13 +84,13 @@ UserTools::requireLogin();
         }
 
         .liste-quiz {
-            margin-left: 20px;
-            
+            margin-left: 95px;
+            margin-top : 100px;
         }
         
         hr {
-            width : 20%;
-            margin-top : 60px;
+            width : 70%;
+            position : fixed;
         }
 
 
@@ -140,12 +139,10 @@ UserTools::requireLogin();
                     <input type="text" name="query" placeholder=" voyage, disney, harry potter..." class="search-input" required>
                     <button type="submit" class="search-button">OK</button>
                 </form>
-                    
-                
             </section>
-            <hr/>
             <section class="liste-quiz">
                 <h3> Nos derniers quiz </h3>
+                <hr/>
                 <?php 
                 $i = 0;
                 foreach($quizs as $quiz){

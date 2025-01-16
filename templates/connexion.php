@@ -35,6 +35,7 @@ else if (!empty($_POST['login']) || !empty($_POST['password'])) {
     }
 
     .login {
+        margin-top : 100px;
         padding: 20px;
         background-color: #fff;
         border: 1px solid lightgray;
@@ -65,7 +66,7 @@ else if (!empty($_POST['login']) || !empty($_POST['password'])) {
         font-size: 14px;
     }
 
-    #login-btn {
+    #login-submit {
         background-color: #333;
         color: #fff;
         padding: 10px;

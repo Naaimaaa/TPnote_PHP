@@ -19,6 +19,61 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
 <!DOCTYPE html>
 <html lang="fr">
 <?php include('global/head.php'); ?>
+<style>
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5%;
+    }
+
+    h1 {
+        text-align : center;
+    }
+
+    .inscription {
+        margin-top : 100px;
+        padding: 40px;
+        background-color: #fff;
+        border: 1px solid lightgray;
+        border-radius: 8px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-section h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width : 352px;
+    }
+
+    form label {
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+
+    form input {
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid lightgray;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+
+    #subscribe-submit {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+</style>
 <body>
     <?php include('global/header.php'); ?>
     <main>
