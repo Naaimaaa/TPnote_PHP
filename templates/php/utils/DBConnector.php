@@ -43,11 +43,16 @@ class DBConnector {
         $sql = "SELECT NUMQ, INTITULE FROM COMPOSER NATURAL JOIN QUESTION WHERE IDQUIZ= ?;";
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([$idQ]);
-        $questions = $stmt->fetchAll();
-        return $questions;
+        $questions = $stmt->fetchAll;
     }
 
-    /**
+
+
+   /**
+     * get_quiz, get l'ensemble des quiz de la BD
+     *
+     * @return array la liste des quizs
+    **
      * get_reponses, get l'ensemble des réponses à une question de la BD
      *
      * @return array la liste des réponses

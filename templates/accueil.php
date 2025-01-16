@@ -1,7 +1,9 @@
 <?php
 session_start();
-//require_once 'php/autoloader.php';
-//Autoloader::register();
+require_once 'php/autoloader.php';
+Autoloader::register();
+use utils\UserTools;
+UserTools::requireLogin();
 ?>
 
 <!DOCTYPE html>
@@ -40,6 +42,7 @@ session_start();
             text-align: center;
             margin-left : 17%;
             margin-top : 20px;
+            align-items : center;
         }
 
 

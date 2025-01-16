@@ -11,7 +11,7 @@ class UserTools {
         $db = new PDO('mysql:host=servinfo-maria;dbname=DBvalin', 'valin', 'valin');
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $hash = hash('sha1', $password);
-        $query = $db->prepare('SELECT EMAILU FROM UILISATEUR WHERE EMAILU = :email AND PASSWORD = :password');
+        $query = $db->prepare('SELECT EMAILU FROM UTILISATEUR WHERE EMAILU = :email AND PASSWORD = :password');
         $query->execute(array('email' => $email, 'password' => $hash));
         $result = $query->fetch();
         return $result;

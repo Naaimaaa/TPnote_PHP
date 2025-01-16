@@ -58,8 +58,7 @@ namespace global\header
         width : auto;
     }
 
-    .user-space a {
-        text-decoration: none;
+    .user-space p {
         color: white;
         font-size : 16px;
         line-height: 1;
@@ -84,6 +83,36 @@ namespace global\header
         background-color: white;
     }
 
+
+    #mon-compte {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    #mon-compte a {
+        text-decoration : none;
+        color : white;
+    }
+
+    #mon-compte a:hover {
+        font-weight : bold;
+    }
+    
+
+    #mon-compte.show {
+        display : flex;
+        gap: 10px;
+        background-color: #43319D;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        flex-direction: column;
+    }
+
     @media (max-width: 768px) {
         nav {
             display: none; /* Cache le menu par défaut */
@@ -94,7 +123,7 @@ namespace global\header
             top: 70px;
             left: 0;
             width: 100%;
-            padding: 20px;        
+            padding: 20px;
         }
 
         .burger-menu {
@@ -110,7 +139,17 @@ namespace global\header
 <script>
     function toggleMenu() {
         const menu = document.getElementById('menu');
+        const compte = document.getElementById('mon-compte')
+        compte.classList.remove('show');
         menu.classList.toggle('show');
+        
+    }
+
+    function menuDisplay() {
+        const compte = document.getElementById('mon-compte');
+        const menu = document.getElementById('menu');
+        menu.classList.remove('show');
+        compte.classList.toggle('show');
     }
 </script>
 <header>
@@ -129,8 +168,13 @@ namespace global\header
         <a href="#"> Mes quiz </a>
         <a href="#"> Contact </a>
     </nav>
-    <div class="user-space">
+    <div id="mon-compte" >
+        <div><a href="connexion.php">Se connecter</a></div>
+        <div><a href="inscription.php">S'inscrire</a></div>
+        <div><a href="#">Aide</a></div>
+    </div>
+    <div class="user-space" onclick="menuDisplay()">
         <img src="img/user.webp" alt="icone-user">
-        <a href="#"> Mon compte</a>
+        <p>Mon compte</p>
     </div>
 </header>
