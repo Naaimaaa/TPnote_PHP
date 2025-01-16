@@ -3,13 +3,14 @@ session_start();
 require_once 'php/autoloader.php';
 Autoloader::register();
 use utils\UserTools;
-//UserTools::requireLogin();
+
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
 <?php
     include 'global/head.php';
+
 ?>
     <style>
 
@@ -28,7 +29,7 @@ use utils\UserTools;
             font-size: 80px ;
             margin : 0;
         }
-
+        include 'global/head.php';
         .bienvenue h3, 
         .recherche h3,
         .liste-quiz h3 {
@@ -126,7 +127,15 @@ use utils\UserTools;
 
     </style>
     <body>
-        <?php include('global/header.php'); ?>
+        <?php 
+            if (UserTools::isLogged()) {
+                include 'global/headerCo.php';
+            }
+            else {
+                include 'glabal/header.php';
+            }
+
+         ?>
         <title>Let's Quizz - Accueil</title>
         <main>
             <div class="bienvenue">
@@ -143,17 +152,7 @@ use utils\UserTools;
             <section class="liste-quiz">
                 <h3> Nos derniers quiz </h3>
                 <hr/>
-                <?php 
-                $i = 0;
-                foreach($quizs as $quiz){
-                    ?>
-                <div class="bloc">
-                    <div class="quiz">
-                <?php
-                    $quiz[$i][1];
-                    echo $quiz[$i][1];
-                    $i = $i + 1;
-                }?>
+                
             </div>
                 
             </section>

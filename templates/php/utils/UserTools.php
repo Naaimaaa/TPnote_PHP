@@ -2,6 +2,8 @@
 namespace utils;
 use utils\DBConnector;
 use \PDO;
+session_start();
+
 
 // classe donnant des outils pour la gestion des utilisateurs
 
@@ -11,7 +13,7 @@ class UserTools {
         $db = new PDO('mysql:host=servinfo-maria;dbname=DBvalin', 'valin', 'valin');
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $hash = hash('sha1', $password);
-        $query = $db->prepare('SELECT EMAILU FROM UTILISATEUR WHERE EMAILU = :email AND PASSWORD = :password');
+        $query = $db->prepare('SELECT * FROM UTILISATEUR WHERE EMAILU = :email AND PASSWRD = :password');
         $query->execute(array('email' => $email, 'password' => $hash));
         $result = $query->fetch();
         return $result;
@@ -68,8 +70,8 @@ class UserTools {
             $db = new PDO('mysql:host=servinfo-maria;dbname=DBvalin', 'valin', 'valin');
             $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $hash = hash('sha1', $password);
-            $query = $db->prepare('INSERT INTO UTILISATEUR VALUES(:email, :passwrd ,:nom, :prenom');
-            $query->execute(array('email' => $email, 'password' => $hash, 'nom' => $nom, 'prenom' => $prenom));
+            $query = $db->prepare('INSERT INTO UTILISATEUR VALUES(:email, :passwrd ,:nom, :prenom)');
+            $query->execute(array('email' => $email, 'passwrd' => $hash, 'nom' => $nom, 'prenom' => $prenom));
         }
         else {
             echo "Une erreur s'est produite lors de la tentive d'ajout d'un utilisateur, vérifiez que cet utilisateur n'existe pas déjà";

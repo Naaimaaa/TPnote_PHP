@@ -3,13 +3,18 @@ session_start();
 require_once 'php/autoloader.php';
 Autoloader::register();
 use utils\UserTools;
+echo '<pre>';
+print_r($_SESSION);
+print_r($_POST);
+echo '</pre>';
+
 if (!empty($_POST['email']) && !empty($_POST['password'])) {
     $login = UserTools::login($_POST['email'], $_POST['password']);
     if ($login == true) {
-        header('Location : accueil.php');
-        } else {
-        header('Location : accueil.php?error=1');
-        }
+        header('Location: accueil.php');
+    } else {
+        header('Location: connexion.php?error=1');
+    }
 
 }
 
@@ -96,7 +101,7 @@ else if (!empty($_POST['login']) || !empty($_POST['password'])) {
         <main>
             <section class="login">
                 <h1> Connexion </h1>
-                <form action="connexion.php" method="POST">
+                <form action="" method="POST">
                     <label for="email"> Email </label>
                     <input type="email" id="email" name="email" placeholder="Votre email" required>
 
