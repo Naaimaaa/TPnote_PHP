@@ -3,6 +3,12 @@ session_start();
 require_once 'php/autoloader.php';
 Autoloader::register();
 use utils\UserTools;
+use utils\DBConnector;
+if (isset($_GET['function']) && $_GET['function'] === 'logout') {
+    UserTools::logout();
+}
+
+$listeQuizs = $connexion->get_participations($_SESSION['user']['email']);
 
 ?>
 
@@ -29,7 +35,7 @@ use utils\UserTools;
             font-size: 80px ;
             margin : 0;
         }
-        include 'global/head.php';
+        
         .bienvenue h3, 
         .recherche h3,
         .liste-quiz h3 {
@@ -132,7 +138,7 @@ use utils\UserTools;
                 include 'global/headerCo.php';
             }
             else {
-                include 'glabal/header.php';
+                include 'global/header.php';
             }
 
          ?>
@@ -152,11 +158,14 @@ use utils\UserTools;
             <section class="liste-quiz">
                 <h3> Nos derniers quiz </h3>
                 <hr/>
-                
-            </div>
-                
-            </section>
-            
+                <?php foreach($listeQuizs as $quiz) {
+                    ?>
+                <div class="quiz-card">
+                    <h3><?php echo $quiz['NOMQUIZ']?></h3>
+                </div>
+                <?php }  ?>   
+            </section>  
         </main>
+    </body>
 
 

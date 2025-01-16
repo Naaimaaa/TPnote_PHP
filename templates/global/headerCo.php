@@ -107,8 +107,8 @@ namespace global\headerCo
         background-color: #43319D;
         position: absolute;
         top: 70px;
-        left: 0;
-        width: 100%;
+        right: 0;
+        width: 10%;
         padding: 20px;
         flex-direction: column;
     }
@@ -169,7 +169,7 @@ namespace global\headerCo
         <a href="#"> Contact </a>
     </nav>
     <div id="mon-compte" >
-        <div><a href="accueil.php">Se déconnecter</a></div>
+        <div><a href="accueil.php?function=logout">Se déconnecter</a></div>
         <div><a href="#">Aide</a></div>
     </div>
     <div class="user-space" onclick="menuDisplay()">

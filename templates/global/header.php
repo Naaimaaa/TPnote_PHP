@@ -25,10 +25,6 @@ namespace global\header
         filter : drop-shadow(0px 0px 4px);
     }
 
-    .logo img {
-        height: 40px;
-        width: auto;
-    }
 
     nav {
         display: flex;
@@ -42,7 +38,9 @@ namespace global\header
         transition: font-weight 0.3s ease;
     }
 
-    nav a:hover {
+    nav a:hover,
+    .user-space p:hover,
+    .logo a:hover  {
         font-weight : bold;
     }
 
@@ -66,6 +64,17 @@ namespace global\header
         padding: 5px 10px;
         display: inline-block;
     }
+
+    .logo a {
+        text-decoration: none;
+        color: white;
+        font-size : 16px;
+        line-height: 1;
+        margin: 0;
+        padding: 5px 10px;
+        display: inline-block; 
+    }
+    
 
 
     /* Responsiveness du site */
@@ -107,8 +116,8 @@ namespace global\header
         background-color: #43319D;
         position: absolute;
         top: 70px;
-        left: 0;
-        width: 100%;
+        right: 0;
+        width: 10%;
         padding: 20px;
         flex-direction: column;
     }
@@ -154,9 +163,7 @@ namespace global\header
 </script>
 <header>
     <div class="logo">
-        <a href="accueil.php">
-            <img src="#" alt="logo">
-        </a>
+        <a href="accueil.php">Accueil</a>
     </div>
     <div class="burger-menu" onclick="toggleMenu()">
         <div></div>
@@ -164,7 +171,7 @@ namespace global\header
         <div></div>
     </div>
     <nav id="menu">
-        <a href="../statistiques.php" aria-disabled="true"> Statistiques </a>
+        <a href="#" aria-disabled="true"> Statistiques </a>
         <a href="#" aria-disabled="true"> Mes quiz </a>
         <a href="#"> Contact </a>
     </nav>
