@@ -26,7 +26,6 @@ session_start();
         }
 
         h1 {
-
             color: white;
             padding: 1rem 2rem;
             text-align: center;
@@ -82,7 +81,7 @@ session_start();
         <section class="container">
             <h2>Testez vos connaissances !</h2>
             <p>Êtes-vous prêt à relever le défi ? Cliquez sur le bouton ci-dessous pour démarrer l'aventure.</p>
-            <a href="accueil.php" class="start-btn">Rejoindre une aventure</a>
+            <a href="index.php?action=accueil" class="start-btn">Rejoindre une aventure</a>
         </section>
     </main>
 </body>

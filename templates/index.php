@@ -1,27 +1,29 @@
 <?php
 
-require_once 'autoloader.php';
+require_once 'php/autoloader.php';
 Autoloader::register();
 
-if (isset($_REQUEST['action'])) {
-    $action = $_REQUEST['action'];
-} else {
-    $action = 'bienvenue';
-}
+
+$action = $_REQUEST['action'] ?? 'bienvenue';
+
 
 switch ($action) {
     case 'bienvenue':
-        include 'bienvenue.php';
+        require_once 'bienvenue.php';
         break;
     case 'accueil':
-        include 'accueil.php';
+        require_once 'accueil.php';
         break;
     case 'quizz':
         include 'quizz.php';
         break;
     case 'resultat':
-        include 'resultat.php';
+        require_once 'resultat.php';
         break;
+    case 'head':
+        require_once 'global/head.php';
+    case 'header':
+        require_once 'global/header.php';
     default:
         include '404.php';
         break;

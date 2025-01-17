@@ -1,9 +1,8 @@
 <?php
-
+session_start();
 require_once 'php/providerJSON.php';
 use Classes\Question;
 use Classes\Reponse;
-session_start();
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -16,12 +15,7 @@ session_start();
     </head>
     <body>
         <?php
-        $page = 'quizz.php';
         $quizz = providerJSON("../Data/QuestionReponse.json");
-
-        if (!isset($_SESSION['score'])) {
-            $_SESSION['score'] = 0;
-        }
 
         if (!isset($_POST['nbQuestions'])) {
             $_POST['nbQuestions'] = 5;
@@ -30,25 +24,29 @@ session_start();
         $titre = $quizz->getQuizz();
         echo("<h1>$titre</h1>\n");
 
-        if (isset($_POST['nbQuestions']) && $_POST['nbQuestions'] > 0){
-            $nbQuestion = $_POST['nbQuestions'];
-            $quizz->setNbQuestions($nbQuestion);
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['valider'])) {
+            $_SESSION['nbQuestions'] = $_POST['nbQuestions'];
+            $nbQuestions = $_SESSION['nbQuestions'];
+            $quizz->setNbQuestions($nbQuestions);
         }
-        
+
+
+
         $lesQuestions = $quizz->getLesQuestions();
         echo "<form method='post'>";
             echo "<label for='nbQuestions'>Nombre de questions (5 par défaut) :</label><br>";
             echo "<input type='number' id='nbQuestions' name='nbQuestions' min='1' value='" . $_POST['nbQuestions'] . "' max='" . count($lesQuestions) . "'>";
-            echo "<button type='submit'>Valider</button>";
+            echo "<button type='submit' name='valider'>Valider</button>";
         echo "</form><br>";
 
 
-        $nbQuestion = $quizz->getNbQuestions();
-
-        echo "<form method='POST' action='resultat'>";
+        if (isset($_SESSION['nbQuestions'])) {
+        $nbQuestions = $quizz->getNbQuestions();
+        echo "<form action='resultat' method='POST'>";
+        echo "<input type='hidden' name='nbQuestions' value='$nbQuestions'>";
             $index = 0;
             foreach($lesQuestions as $question){
-                if ($index == $nbQuestion){
+                if ($index == $nbQuestions){
                     break;
                 }
                 echo "<br>";
@@ -62,9 +60,14 @@ session_start();
                 }
                 $index++;
             }
-            echo "<input type='submit' value='Cliquez pour voir votre résultat'/>";
-        echo "</form>";
+        echo "<button type='submit' name='voir_resultat'>Cliquer pour voir votre résultat</button>";
+        echo "</form>";    
+        }
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['voir_resultat'])) {
+            header("Location: resultat.php");
+        }
 
         ?>
+
     </body>
 </html>

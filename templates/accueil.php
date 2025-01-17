@@ -7,7 +7,7 @@ session_start();
 <!DOCTYPE html>
 <html lang="fr">
 <?php
-    include '../global/head.php';
+    include 'global/head.php';
 ?>
     <style>
         .bienvenue {
@@ -27,7 +27,7 @@ session_start();
 
     </style>
     <body>
-        <?php include('../global/header.php'); ?>
+        <?php include('global/header.php'); ?>
         <main>
             <div class="bienvenue">
                 <h1> Bienvenue sur Let's Quiz !</h1>
