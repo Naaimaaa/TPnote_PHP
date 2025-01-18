@@ -150,7 +150,6 @@ if (isset($_GET['function']) && $_GET['function'] === 'logout') {
             <div class="bienvenue">
                 <h1> Bienvenue sur Let's Quizz !</h1>
                 <h3> La meilleure plateforme de quiz en ligne</h3>
-                <a href="index.php?action=quizz" class="start-btn">jouer test</a>
             </div>
             <section class="recherche">
                 <h3>Rechercher un quiz</h3>
@@ -167,6 +166,8 @@ if (isset($_GET['function']) && $_GET['function'] === 'logout') {
                     echo "<input type='file' id='quizzJSON' name='quizzJSON' accept='application/json'/>";
                     echo "<button type='submit' name='importQuizz'>Importer</button>";
                 echo "</form>";
+                <a href="index.php?action=quizz" class="start-btn">Quizz sur le php</a>
+
                 ?>
             </section>  
         </main>
