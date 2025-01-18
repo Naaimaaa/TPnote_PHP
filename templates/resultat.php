@@ -21,10 +21,10 @@ use Classes\Reponse;
 
         $lesQuestions = $quizz->getLesQuestions();
 
-        if (!isset($_POST['nbQuestions'])){
-            $nbQuestions = 5;
-        }else{
+        if (isset($_POST['nbQuestions'])){
             $nbQuestions = $_POST['nbQuestions'];
+        } else {
+            $nbQuestions = 5;
         }
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -51,7 +51,22 @@ use Classes\Reponse;
         echo "<h2>Votre score :</h2>";
         echo $_SESSION['score'] . '/' . $nbQuestions;
         echo "<br>";
-        echo "CORRECTION A IMPLEMENTER";
+
+        if ($_SESSION['score'] == $nbQuestions){
+            echo "Incroyable ! Tu es un véritable expert !";
+        }
+        else if ($nbQuestions > $_SESSION['score'] &&  $_SESSION['score'] >= $nbQuestions*0.8){
+            echo "Presque parfait ! Plus que quelques détails pour atteindre la perfection !";
+        } 
+        else if ($nbQuestions*0.8 > $_SESSION['score'] &&  $_SESSION['score'] >= $nbQuestions*0.5){
+            echo "Bien joué ! Continue tes efforts !";
+        }
+        else if ($nbQuestions*0.5 > $_SESSION['score'] &&  $_SESSION['score'] >= $nbQuestions*0.2){
+            echo "Ne te décourage pas, l'important c'est d'apprendre !";
+        }
+        else {
+            echo "Oups… On dirait que c'était difficile !";
+        }
         ?>
     </body>
 </html>      

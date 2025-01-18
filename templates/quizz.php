@@ -18,21 +18,16 @@ use Classes\Reponse;
         <?php
         $quizz = providerJSON("../Data/QuestionReponse.json");
 
-        if (!isset($_POST['nbQuestions'])) {
-            $_POST['nbQuestions'] = 5;
-        }
-
         if (!isset($_SESSION['score'])) {
             $_SESSION['score'] = 0;
+        }
+
+        if (!isset($_POST['nbQuestions'])) {
+            $_POST['nbQuestions'] = 5;
         }
         
         $titre = $quizz->getQuizz();
         echo("<h1>$titre</h1>\n");
-
-        if (isset($_POST['nbQuestions']) && $_POST['nbQuestions'] > 0){
-            $nbQuestion = $_POST['nbQuestions'];
-            $quizz->setNbQuestions($nbQuestion);
-        }
 
         $lesQuestions = $quizz->getLesQuestions();
         echo "<form method='post'>";
@@ -40,6 +35,12 @@ use Classes\Reponse;
             echo "<input type='number' id='nbQuestions' name='nbQuestions' min='1' value='" . $_POST['nbQuestions'] . "' max='" . count($lesQuestions) . "'>";
             echo "<button type='submit' name='valider'>Valider</button>";
         echo "</form><br>";
+
+
+        if (isset($_POST['nbQuestions']) && $_POST['nbQuestions'] > 0){
+            $nbQuestion = $_POST['nbQuestions'];
+            $quizz->setNbQuestions($nbQuestion);
+        }
 
         $nbQuestions = $quizz->getNbQuestions();
         echo "<form name='quizzForm' action='index.php?action=resultat' method='POST'>";
@@ -61,6 +62,7 @@ use Classes\Reponse;
                 $index++;
             }
         echo "<button type='submit' class='submit-btn'>Cliquer pour voir votre résultat</button>";
+        echo "<input type='hidden' name='nbQuestions' value='$nbQuestions'>";
         echo "</form>";
 
         ?>
