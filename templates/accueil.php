@@ -8,7 +8,8 @@ if (isset($_GET['function']) && $_GET['function'] === 'logout') {
     UserTools::logout();
 }
 
-$listeQuizs = $connexion->get_participations($_SESSION['user']['email']);
+// Décommenter la ligne suivante si connexion à BD fonctionne
+//$listeQuizs = $connexion->get_participations($_SESSION['user']['email']);
 
 ?>
 
