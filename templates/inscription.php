@@ -21,7 +21,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
 <?php include('global/head.php'); ?>
 <style>
     main {
-        diinscription':
+        display: flex;
         justify-content: center;
         align-items: center;
         padding: 5%;
