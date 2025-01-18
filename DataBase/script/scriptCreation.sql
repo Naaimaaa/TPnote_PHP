@@ -1,6 +1,6 @@
 -- create new schema
-create database if not exists TP_PHP;
-use TP_PHP;
+-- create database if not exists TP_PHP;
+-- use TP_PHP;
 
 -- Script de création de la base de données
 DROP TABLE IF EXISTS PARTICIPER;
@@ -13,6 +13,7 @@ DROP TABLE IF EXISTS QUIZ;
 
 CREATE TABLE UTILISATEUR(
     EMAILU VARCHAR(50) PRIMARY KEY NOT NULL,
+    PASSWRD VARCHAR(100),
     NOMU VARCHAR(15),
     PRENOMU VARCHAR(15)
 );

@@ -6,8 +6,8 @@ use \PDO;
 class DBConnector {
     private $pdo;
     public function __construct($nombase, $dbuser, $dbpass){
-        // $this->pdo= new PDO('mysql:host=servinfo-maria;dbname='.$nombase.'', $dbuser, $dbpass);
-        $this->pdo= new PDO('mysql:host=localhost;dbname='.$nombase.'', $dbuser, $dbpass);
+        $this->pdo= new PDO('mysql:host=servinfo-maria;dbname='.$nombase.'', $dbuser, $dbpass);
+        //$this->pdo= new PDO('mysql:host=;dbname='.$nombase.'', $dbuser, $dbpass);
     }
     
     /**
@@ -43,11 +43,16 @@ class DBConnector {
         $sql = "SELECT NUMQ, INTITULE FROM COMPOSER NATURAL JOIN QUESTION WHERE IDQUIZ= ?;";
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([$idQ]);
-        $questions = $stmt->fetchAll();
-        return $questions;
+        $questions = $stmt->fetchAll;
     }
 
+
+
     /**
+     * get_quiz, get l'ensemble des quiz de la BD
+     *
+     * @return array la liste des quizs
+    **
      * get_reponses, get l'ensemble des réponses à une question de la BD
      *
      * @return array la liste des réponses
@@ -66,12 +71,12 @@ class DBConnector {
      *
      * @return array la liste des participations
      */
-    public function get_participation(string $emailU):array{
+    public function get_participations(string $emailU):array{
         $sql = "SELECT * FROM QUIZ NATURAL JOIN PARTICIPER NATURAL JOIN UTILISATEUR WHERE EMAILU= ?;";
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([$emailU]);
-        $questions = $stmt->fetchAll();
-        return $questions;
+        $participations = $stmt->fetchAll();
+        return $participations;
     }
 
     

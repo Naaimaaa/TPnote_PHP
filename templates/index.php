@@ -5,7 +5,6 @@ Autoloader::register();
 
 $action = $_REQUEST['action'] ?? 'bienvenue';
 
-
 switch ($action) {
     case 'bienvenue':
         require_once 'bienvenue.php';
