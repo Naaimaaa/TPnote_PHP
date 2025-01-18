@@ -1,7 +1,7 @@
 <?php
 session_start();
-//require_once 'templates/php/autoloader.php';
-//Autoloader::register();
+require_once('php/Autoloader.php');
+Autoloader::register();
 
 
 ?>
