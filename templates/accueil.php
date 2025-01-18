@@ -17,7 +17,6 @@ if (isset($_GET['function']) && $_GET['function'] === 'logout') {
 <html lang="fr">
 <?php
     include 'global/head.php';
-
 ?>
     <style>
 
@@ -134,6 +133,7 @@ if (isset($_GET['function']) && $_GET['function'] === 'logout') {
 
     </style>
     <body>
+
         <?php
             //Affichage du header différent selon connexion ou non 
             if (UserTools::isLogged()) {
@@ -145,10 +145,12 @@ if (isset($_GET['function']) && $_GET['function'] === 'logout') {
 
          ?>
         <title>Let's Quizz - Accueil</title>
+
         <main>
             <div class="bienvenue">
                 <h1> Bienvenue sur Let's Quizz !</h1>
                 <h3> La meilleure plateforme de quiz en ligne</h3>
+                <a href="index.php?action=quizz" class="start-btn">jouer test</a>
             </div>
             <section class="recherche">
                 <h3>Rechercher un quiz</h3>

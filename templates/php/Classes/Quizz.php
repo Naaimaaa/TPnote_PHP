@@ -1,20 +1,26 @@
 <?php
 namespace Classes;
 class Quizz{
+    private String $intitule;
     private $nbQuestion;
     private $score;
     private $lesQuestions;
     private $leJoueur;
 
-    public function __construct(Joueur $joueur){
+    public function __construct(String $intitule, $joueur = null){
+        $this->intitule = $intitule;
         $this->nbQuestion = 5;
         $this->score = 0;
         $this->lesQuestions = array();
         $this->leJoueur = $joueur;
     }
 
+    public function getQuizz(){
+        return $this->intitule;
+    }
+
     public function getNbQuestions(){
-        return $this->getNbQuestions;
+        return $this->nbQuestion;
     }
 
     public function setNbQuestions(int $nb){
@@ -25,8 +31,8 @@ class Quizz{
         return $this->score;
     }
 
-    public function setScore(){
-        $this->score += 1;
+    public function setScore(int $score){
+        $this->score = $score;
     }
 
     public function getLesQuestions(){
