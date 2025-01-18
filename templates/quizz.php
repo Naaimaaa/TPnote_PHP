@@ -22,6 +22,10 @@ use Classes\Reponse;
             $_POST['nbQuestions'] = 5;
         }
 
+        if (!isset($_SESSION['score'])) {
+            $_SESSION['score'] = 0;
+        }
+        
         $titre = $quizz->getQuizz();
         echo("<h1>$titre</h1>\n");
 
@@ -38,8 +42,8 @@ use Classes\Reponse;
         echo "</form><br>";
 
         $nbQuestions = $quizz->getNbQuestions();
-        echo "<form name='quizzForm' action='" . htmlspecialchars($_SERVER['PHP_SELF']) . "?action=resultat' method='POST'>";
-        echo"<input type='hidden' name='form_name' value='quizzForm'>";
+        echo "<form name='quizzForm' action='index.php?action=resultat' method='POST'>";
+        echo"<input type='hidden' name='nomForm' value='quizzForm'>";
             $index = 0;
             foreach($lesQuestions as $question){
                 if ($index == $nbQuestions){
@@ -50,7 +54,8 @@ use Classes\Reponse;
                 echo "<br>";
                 echo "<br>";
                 foreach ($question->getLesReponses() as $reponse){
-                    echo "<input type='radio' name='question$index' value='" . $reponse->getReponse() . "'> ";
+                    echo "<input type='radio' name='question{$index}' value='" . $reponse->getReponse() . "'> ";
+                    echo"<input type='hidden' name='question{$index}' value='question{$index}'>";
                     echo("   " . $reponse->getReponse());
                     echo "<br>";
                 }

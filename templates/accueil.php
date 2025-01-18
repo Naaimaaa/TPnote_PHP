@@ -32,6 +32,7 @@ session_start();
             <div class="bienvenue">
                 <h1> Bienvenue sur Let's Quiz !</h1>
                 <h3> La meilleure plateforme de quiz en ligne</h3>
+                <a href="index.php?action=quizz" class="start-btn">jouer test</a>
             </div>
             <section class="nouveautes">
                 <div>

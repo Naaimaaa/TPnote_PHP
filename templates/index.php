@@ -17,9 +17,7 @@ switch ($action) {
         require_once 'quizz.php';
         break;
     case 'resultat':
-        error_log('aaaaaaaaaaaaaaaaaaa');
-        header('Location: resultat.php');
-        exit;
+        require_once 'resultat.php';
         break;
     case 'head':
         require_once 'global/head.php';

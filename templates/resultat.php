@@ -17,34 +17,25 @@ use Classes\Reponse;
     <body>
         <?php
 
-
-
-        if ($_SERVER["REQUEST_METHOD"] === "POST") {
-            echo "<pre>";
-            print_r($_POST); // Vérifie que les données sont bien reçues
-            echo "</pre>";
-        } else {
-            echo "Aucune donnée reçue.";
-        }
-
-        
         $quizz = providerJSON("../Data/QuestionReponse.json");
+
         $lesQuestions = $quizz->getLesQuestions();
+
         if (!isset($_POST['nbQuestions'])){
             $nbQuestions = 5;
         }else{
             $nbQuestions = $_POST['nbQuestions'];
         }
+
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            if (isset($_POST['form_name']) && $_POST['form_name'] === 'quizzForm') {
-                $_SESSION['score'] = 0;
+            if ($_POST['nomForm'] === 'quizzForm') {
                 $index = 0;
                 foreach ($lesQuestions as $question){
                     if ($index >= $nbQuestions){
                         break;
                     }
-                    if(isset($_POST['question$index'])){
-                        $repJoueur = $_POST['question$index'];
+                    if(isset($_POST["question{$index}"])){
+                        $repJoueur = $_POST["question{$index}"];
                         foreach ($question->getLesReponses() as $reponse){
                             if ($repJoueur == $reponse->getReponse() && $reponse->bonneReponse()){
                                 $_SESSION['score']++;

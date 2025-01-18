@@ -31,8 +31,8 @@ class Quizz{
         return $this->score;
     }
 
-    public function setScore(){
-        $this->score += 1;
+    public function setScore(int $score){
+        $this->score = $score;
     }
 
     public function getLesQuestions(){
