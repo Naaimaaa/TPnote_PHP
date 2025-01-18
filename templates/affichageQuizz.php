@@ -122,13 +122,21 @@ use Classes\Reponse;
 
             $lesQuestions = $quizz->getLesQuestions();
             
-            echo "<form method='post'>";
-                echo "<label for='nbQuestions'>Nombre de questions (5 par défaut) :</label><br>";
-                echo "<input type='number' id='nbQuestions' name='nbQuestions' min='1' value='" . $_POST['nbQuestions'] . "' max='" . count($lesQuestions) . "'>";
-                echo "<button type='submit' name='valider'>Valider</button>";
-            echo "</form><br>";
+            if ($_SERVER['REQUEST_URI'] != '/index.php?action=importJSON'){
+                echo "<form method='post'>";
+                    echo "<label for='nbQuestions'>Nombre de questions (5 par défaut) :</label><br>";
+                    echo "<input type='number' id='nbQuestions' name='nbQuestions' min='1' value='" . $_POST['nbQuestions'] . "' max='" . count($lesQuestions) . "'>";
+                    echo "<button type='submit' name='valider'>Valider</button>";
+                echo "</form><br>";
+            } 
 
             if (isset($_POST['nbQuestions']) && $_POST['nbQuestions'] > 0){
+                $nbQuestion = $_POST['nbQuestions'];
+                $quizz->setNbQuestions($nbQuestion);
+            }
+
+            if (($_SERVER['REQUEST_URI'] == '/index.php?action=importJSON')){
+                $_POST['nbQuestions'] = count($lesQuestions);
                 $nbQuestion = $_POST['nbQuestions'];
                 $quizz->setNbQuestions($nbQuestion);
             }
