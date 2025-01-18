@@ -27,8 +27,6 @@ use Classes\Reponse;
             $nbQuestions = 5;
         }
 
-        $repJoueur = null;
-
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($_POST['nomForm'] === 'quizzForm') {
                 $_SESSION['score'] = 0;
@@ -80,18 +78,25 @@ use Classes\Reponse;
             }
             echo "<h3>Question ".($i+1).": ".$question->getQuestion()."</h3>";
             echo "<br>";
-            echo "Réponse correcte : ";
+            echo "Réponse attendue : ";
             foreach ($question->getLesReponses() as $reponse){
                 if ($reponse->bonneReponse()){
                     echo $reponse->getReponse();
-                    if ($repJoueur == $reponse->getReponse()){
+                    if(isset($_POST["question$i"])){
+                        $repJoueur = $_POST["question$i"];
+                        if ($repJoueur == $reponse->getReponse()){
+                            echo "<br>";
+                            echo "&#9989; Votre réponse : $repJoueur";
+                            $i++;
+                        }
+                        else{
+                            echo "<br>";
+                            echo "&#10060; Votre réponse : $repJoueur";
+                            $i++;
+                        }
+                    } else {
                         echo "<br>";
-                        echo "&#9989; Votre réponse : $repJoueur";
-                        $i++;
-                    }
-                    else{
-                        echo "<br>";
-                        echo "&#10060; Votre réponse : $repJoueur";
+                        echo "&#10060; Aucune réponse sélectionnée.";
                         $i++;
                     }
                 }
