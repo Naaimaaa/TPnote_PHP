@@ -161,13 +161,8 @@ if (isset($_GET['function']) && $_GET['function'] === 'logout') {
             </section>
             <section class="liste-quiz">
                 <h3> Nos derniers quiz </h3>
-                <hr/>
-                <!-- <?php foreach($listeQuizs as $quiz) {
-                    ?>
-                <div class="quiz-card">
-                    <h3><?php echo $quiz['NOMQUIZ']?></h3>
-                </div>
-                <?php }  ?>   -->
+                <button type="submit" class="search-button">Importez votre propre quizz ici</button>
+
             </section>  
         </main>
     </body>

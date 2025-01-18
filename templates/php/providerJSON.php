@@ -1,5 +1,5 @@
 <?php
-require_once 'autoloader.php';
+require_once 'Autoloader.php';
 Autoloader::register();
 use Classes\Question;
 use Classes\Reponse;

@@ -101,58 +101,62 @@ use Classes\Reponse;
     </head>
     <body>
         <?php
-        $quizz = providerJSON("../Data/QuestionReponse.json");
 
-        if (!isset($_SESSION['score'])) {
-            $_SESSION['score'] = 0;
-        }
+        function affichageQuizz(String $fichier_quizz){
+            $quizz = providerJSON($fichier_quizz);
 
-        if (!isset($_POST['nbQuestions'])) {
-            $_POST['nbQuestions'] = 5;
-        }
-        
-        $titre = $quizz->getQuizz();
-        echo("<h1>$titre</h1>\n");
-
-        $lesQuestions = $quizz->getLesQuestions();
-        echo "<form method='post'>";
-            echo "<label for='nbQuestions'>Nombre de questions (5 par défaut) :</label><br>";
-            echo "<input type='number' id='nbQuestions' name='nbQuestions' min='1' value='" . $_POST['nbQuestions'] . "' max='" . count($lesQuestions) . "'>";
-            echo "<button type='submit' name='valider'>Valider</button>";
-        echo "</form><br>";
-
-
-        if (isset($_POST['nbQuestions']) && $_POST['nbQuestions'] > 0){
-            $nbQuestion = $_POST['nbQuestions'];
-            $quizz->setNbQuestions($nbQuestion);
-        }
-
-        $nbQuestions = $quizz->getNbQuestions();
-        echo "<form name='quizzForm' action='index.php?action=resultat' method='POST'>";
-        echo"<input type='hidden' name='nomForm' value='quizzForm'>";
-            $index = 0;
-            foreach($lesQuestions as $question){
-                if ($index == $nbQuestions){
-                    break;
-                }
-                echo "<br>";
-                echo "<div class='question'>" . $question->getQuestion() . "</div>";
-                echo "<br>";
-                echo "<br>";
-                echo "<div class='lesReponses'>";
-                foreach ($question->getLesReponses() as $reponse){
-                    echo "<input type='radio' name='question$index' value='" . $reponse->getReponse() . "'> ";
-                    echo "<div class='reponse'>" . $reponse->getReponse() . "";
-                    echo "<br>";
-                }
-                    echo "</div>";
-                echo "</div>";
-                $index++;
+            if (!isset($_SESSION['score'])) {
+                $_SESSION['score'] = 0;
             }
-        echo "<button type='submit' class='submit-btn'>Cliquer pour voir votre résultat</button>";
-        echo "<input type='hidden' name='nbQuestions' value='$nbQuestions'>";
-        echo "</form>";
 
+            if (!isset($_POST['nbQuestions'])) {
+                $_POST['nbQuestions'] = 5;
+            }
+
+            $titre = $quizz->getQuizz();
+            echo("<h1>$titre</h1>\n");
+
+            $lesQuestions = $quizz->getLesQuestions();
+            echo "<form method='post'>";
+                echo "<label for='nbQuestions'>Nombre de questions (5 par défaut) :</label><br>";
+                echo "<input type='number' id='nbQuestions' name='nbQuestions' min='1' value='" . $_POST['nbQuestions'] . "' max='" . count($lesQuestions) . "'>";
+                echo "<button type='submit' name='valider'>Valider</button>";
+            echo "</form><br>";
+
+
+            if (isset($_POST['nbQuestions']) && $_POST['nbQuestions'] > 0){
+                $nbQuestion = $_POST['nbQuestions'];
+                $quizz->setNbQuestions($nbQuestion);
+            }
+
+            $nbQuestions = $quizz->getNbQuestions();
+            echo "<form name='quizzForm' action='index.php?action=resultat' method='POST'>";
+            echo"<input type='hidden' name='nomForm' value='quizzForm'>";
+                $index = 0;
+                foreach($lesQuestions as $question){
+                    if ($index == $nbQuestions){
+                        break;
+                    }
+                    echo "<br>";
+                    echo "<div class='question'>" . $question->getQuestion() . "</div>";
+                    echo "<br>";
+                    echo "<br>";
+                    echo "<div class='lesReponses'>";
+                    foreach ($question->getLesReponses() as $reponse){
+                        echo "<input type='radio' name='question$index' value='" . $reponse->getReponse() . "'> ";
+                        echo "<div class='reponse'>" . $reponse->getReponse() . "";
+                        echo "<br>";
+                    }
+                        echo "</div>";
+                    echo "</div>";
+                    $index++;
+                }
+            echo "<button type='submit' class='submit-btn'>Cliquer pour voir votre résultat</button>";
+            echo "<input type='hidden' name='nbQuestions' value='$nbQuestions'>";
+            echo "</form>";
+        }
+
+        affichageQuizz("../Data/QuestionReponse.json");
         ?>
     </body>
 </html>
