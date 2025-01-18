@@ -15,6 +15,9 @@ switch ($action) {
     case 'quizz':
         require_once 'quizz.php';
         break;
+    case 'affichageQuizz':
+        require_once 'affichageQuizz.php';
+        break;
     case 'resultat':
         require_once 'resultat.php';
         break;
@@ -26,6 +29,7 @@ switch ($action) {
         break;
     case 'importJSON':
         require_once 'importJSON.php';
+        echo "Fichier importJSON.php chargé !<br>";
         break;
     case 'head':
         require_once 'global/head.php';

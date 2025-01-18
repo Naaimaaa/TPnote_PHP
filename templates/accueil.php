@@ -163,9 +163,9 @@ if (isset($_GET['function']) && $_GET['function'] === 'logout') {
                 <h3> Nos derniers quiz </h3>
                 <?php
                 echo "<form action='index.php?action=importJSON' method='post' enctype='multipart/form-data'>";
-                    echo "<label for='quizz'>Importez votre propre quizz ici</label>";
-                    echo "<input type='file' id='quizz' name='quizz' accept='application/json'/>";
-                    echo "<button type='submit'>Valider</button>";
+                    echo "<label for='quizzJSON'>Importez votre propre quizz ici</label>";
+                    echo "<input type='file' id='quizzJSON' name='quizzJSON' accept='application/json'/>";
+                    echo "<button type='submit' name='importQuizz'>Valider</button>";
                 echo "</form>";
                 ?>
             </section>  
