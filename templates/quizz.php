@@ -3,6 +3,7 @@ session_start();
 require_once 'php/providerJSON.php';
 use Classes\Question;
 use Classes\Reponse;
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -24,13 +25,10 @@ use Classes\Reponse;
         $titre = $quizz->getQuizz();
         echo("<h1>$titre</h1>\n");
 
-        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['valider'])) {
-            $_SESSION['nbQuestions'] = $_POST['nbQuestions'];
-            $nbQuestions = $_SESSION['nbQuestions'];
-            $quizz->setNbQuestions($nbQuestions);
+        if (isset($_POST['nbQuestions']) && $_POST['nbQuestions'] > 0){
+            $nbQuestion = $_POST['nbQuestions'];
+            $quizz->setNbQuestions($nbQuestion);
         }
-
-
 
         $lesQuestions = $quizz->getLesQuestions();
         echo "<form method='post'>";
@@ -39,11 +37,9 @@ use Classes\Reponse;
             echo "<button type='submit' name='valider'>Valider</button>";
         echo "</form><br>";
 
-
-        if (isset($_SESSION['nbQuestions'])) {
         $nbQuestions = $quizz->getNbQuestions();
-        echo "<form action='resultat' method='POST'>";
-        echo "<input type='hidden' name='nbQuestions' value='$nbQuestions'>";
+        echo "<form name='quizzForm' action='" . htmlspecialchars($_SERVER['PHP_SELF']) . "?action=resultat' method='POST'>";
+        echo"<input type='hidden' name='form_name' value='quizzForm'>";
             $index = 0;
             foreach($lesQuestions as $question){
                 if ($index == $nbQuestions){
@@ -60,14 +56,9 @@ use Classes\Reponse;
                 }
                 $index++;
             }
-        echo "<button type='submit' name='voir_resultat'>Cliquer pour voir votre résultat</button>";
-        echo "</form>";    
-        }
-        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['voir_resultat'])) {
-            header("Location: resultat.php");
-        }
+        echo "<button type='submit' class='submit-btn'>Cliquer pour voir votre résultat</button>";
+        echo "</form>";
 
         ?>
-
     </body>
 </html>

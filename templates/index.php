@@ -1,5 +1,4 @@
 <?php
-
 require_once 'php/autoloader.php';
 Autoloader::register();
 
@@ -15,17 +14,21 @@ switch ($action) {
         require_once 'accueil.php';
         break;
     case 'quizz':
-        include 'quizz.php';
+        require_once 'quizz.php';
         break;
     case 'resultat':
-        require_once 'resultat.php';
+        error_log('aaaaaaaaaaaaaaaaaaa');
+        header('Location: resultat.php');
+        exit;
         break;
     case 'head':
         require_once 'global/head.php';
+        break;
     case 'header':
         require_once 'global/header.php';
+        break;
     default:
-        include '404.php';
+        require_once '404.php';
         break;
 }
 ?>
