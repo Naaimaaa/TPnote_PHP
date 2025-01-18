@@ -1,5 +1,8 @@
 <?php
+namespace templates;
+
 session_start();
+
 require_once 'php/providerJSON.php';
 use Classes\Question;
 use Classes\Reponse;

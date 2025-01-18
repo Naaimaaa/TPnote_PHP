@@ -24,6 +24,9 @@ switch ($action) {
     case 'inscription':
         require_once 'inscription.php';
         break;
+    case 'importJSON':
+        require_once 'importJSON.php';
+        break;
     case 'head':
         require_once 'global/head.php';
         break;
