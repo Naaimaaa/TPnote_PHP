@@ -54,8 +54,7 @@ use Classes\Reponse;
                 echo "<br>";
                 echo "<br>";
                 foreach ($question->getLesReponses() as $reponse){
-                    echo "<input type='radio' name='question{$index}' value='" . $reponse->getReponse() . "'> ";
-                    echo"<input type='hidden' name='question{$index}' value='question{$index}'>";
+                    echo "<input type='radio' name='question$index' value='" . $reponse->getReponse() . "'> ";
                     echo("   " . $reponse->getReponse());
                     echo "<br>";
                 }

@@ -29,13 +29,14 @@ use Classes\Reponse;
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($_POST['nomForm'] === 'quizzForm') {
+                $_SESSION['score'] = 0;
                 $index = 0;
                 foreach ($lesQuestions as $question){
                     if ($index >= $nbQuestions){
                         break;
                     }
-                    if(isset($_POST["question{$index}"])){
-                        $repJoueur = $_POST["question{$index}"];
+                    if(isset($_POST["question$index"])){
+                        $repJoueur = $_POST["question$index"];
                         foreach ($question->getLesReponses() as $reponse){
                             if ($repJoueur == $reponse->getReponse() && $reponse->bonneReponse()){
                                 $_SESSION['score']++;
@@ -48,7 +49,9 @@ use Classes\Reponse;
             }
         }  
         echo "<h2>Votre score :</h2>";
-        echo $_SESSION['score'];
+        echo $_SESSION['score'] . '/' . $nbQuestions;
+        echo "<br>";
+        echo "CORRECTION A IMPLEMENTER";
         ?>
     </body>
 </html>      
