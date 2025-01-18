@@ -67,6 +67,11 @@ use Classes\Reponse;
         else {
             echo "Oups… On dirait que c'était difficile !";
         }
+
+        echo "<br>";
+        echo "<a href='index.php?action=quizz'>Rejouer</a>";
+        echo "<br>";
+        echo "<a href='index.php?action=accueil'>Retour à l'accueil</a>";
         ?>
     </body>
 </html>      
