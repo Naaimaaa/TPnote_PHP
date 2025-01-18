@@ -1,5 +1,5 @@
 <?php
-require_once 'php/autoloader.php';
+require_once 'php/Autoloader.php';
 Autoloader::register();
 
 
@@ -17,6 +17,12 @@ switch ($action) {
         break;
     case 'resultat':
         require_once 'resultat.php';
+        break;
+    case 'connexion':
+        require_once 'connexion.php';
+        break;
+    case 'inscription':
+        require_once 'inscription.php';
         break;
     case 'head':
         require_once 'global/head.php';

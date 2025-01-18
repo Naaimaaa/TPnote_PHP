@@ -1,5 +1,4 @@
 <?php
-namespace php;
 
 class Autoloader {
     public static function register(){

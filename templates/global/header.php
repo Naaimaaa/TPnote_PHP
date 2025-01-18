@@ -163,7 +163,7 @@ namespace global\header
 </script>
 <header>
     <div class="logo">
-        <a href="accueil.php">Accueil</a>
+        <a href="index.php?action=accueil">Accueil</a>
     </div>
     <div class="burger-menu" onclick="toggleMenu()">
         <div></div>
@@ -176,8 +176,8 @@ namespace global\header
         <a href="#"> Contact </a>
     </nav>
     <div id="mon-compte" >
-        <div><a href="connexion.php">Se connecter</a></div>
-        <div><a href="inscription.php">S'inscrire</a></div>
+        <div><a href="index.php?action=connexion">Se connecter</a></div>
+        <div><a href="index.php?action=inscription">S'inscrire</a></div>
         <div><a href="#">Aide</a></div>
     </div>
     <div class="user-space" onclick="menuDisplay()">
