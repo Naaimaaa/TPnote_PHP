@@ -1,0 +1,139 @@
+{
+    "QUIZZ": [
+        {
+            "question": "Quelle est la capitale de l'Allemagne ?",
+            "reponses": [
+                {"proposition": "Berlin", "solution": true},
+                {"proposition": "Munich", "solution": false},
+                {"proposition": "Francfort", "solution": false},
+                {"proposition": "Hambourg", "solution": false}
+            ]
+        },
+        {
+            "question": "Quelle est la capitale du Canada ?",
+            "reponses": [
+                {"proposition": "Ottawa", "solution": true},
+                {"proposition": "Toronto", "solution": false},
+                {"proposition": "Vancouver", "solution": false},
+                {"proposition": "Montréal", "solution": false}
+            ]
+        },
+        {
+            "question": "Quelle est la capitale de l'Espagne ?",
+            "reponses": [
+                {"proposition": "Madrid", "solution": true},
+                {"proposition": "Barcelone", "solution": false},
+                {"proposition": "Séville", "solution": false},
+                {"proposition": "Valence", "solution": false}
+            ]
+        },
+        {
+            "question": "Quelle est la capitale de l'Italie ?",
+            "reponses": [
+                {"proposition": "Rome", "solution": true},
+                {"proposition": "Milan", "solution": false},
+                {"proposition": "Naples", "solution": false},
+                {"proposition": "Venise", "solution": false}
+            ]
+        },
+        {
+            "question": "Quelle est la capitale du Japon ?",
+            "reponses": [
+                {"proposition": "Tokyo", "solution": true},
+                {"proposition": "Osaka", "solution": false},
+                {"proposition": "Kyoto", "solution": false},
+                {"proposition": "Nagoya", "solution": false}
+            ]
+        },
+        {
+            "question": "Quelle est la capitale du Brésil ?",
+            "reponses": [
+                {"proposition": "Brasilia", "solution": true},
+                {"proposition": "Rio de Janeiro", "solution": false},
+                {"proposition": "São Paulo", "solution": false},
+                {"proposition": "Salvador", "solution": false}
+            ]
+        },
+        {
+            "question": "Quelle est la capitale de l'Australie ?",
+            "reponses": [
+                {"proposition": "Canberra", "solution": true},
+                {"proposition": "Sydney", "solution": false},
+                {"proposition": "Melbourne", "solution": false},
+                {"proposition": "Brisbane", "solution": false}
+            ]
+        },
+        {
+            "question": "Quelle est la capitale de la Russie ?",
+            "reponses": [
+                {"proposition": "Moscou", "solution": true},
+                {"proposition": "Saint-Pétersbourg", "solution": false},
+                {"proposition": "Kazan", "solution": false},
+                {"proposition": "Vladivostok", "solution": false}
+            ]
+        },
+        {
+            "question": "Quelle est la capitale de la Chine ?",
+            "reponses": [
+                {"proposition": "Pékin", "solution": true},
+                {"proposition": "Shanghai", "solution": false},
+                {"proposition": "Hong Kong", "solution": false},
+                {"proposition": "Guangzhou", "solution": false}
+            ]
+        },
+        {
+            "question": "Quelle est la capitale de l'Inde ?",
+            "reponses": [
+                {"proposition": "New Delhi", "solution": true},
+                {"proposition": "Mumbai", "solution": false},
+                {"proposition": "Bangalore", "solution": false},
+                {"proposition": "Chennai", "solution": false}
+            ]
+        },
+        {
+            "question": "Quelle est la capitale des États-Unis ?",
+            "reponses": [
+                {"proposition": "Washington, D.C.", "solution": true},
+                {"proposition": "New York", "solution": false},
+                {"proposition": "Los Angeles", "solution": false},
+                {"proposition": "Chicago", "solution": false}
+            ]
+        },
+        {
+            "question": "Quelle est la capitale du Mexique ?",
+            "reponses": [
+                {"proposition": "Mexico", "solution": true},
+                {"proposition": "Guadalajara", "solution": false},
+                {"proposition": "Monterrey", "solution": false},
+                {"proposition": "Tijuana", "solution": false}
+            ]
+        },
+        {
+            "question": "Quelle est la capitale de l'Afrique du Sud ?",
+            "reponses": [
+                {"proposition": "Pretoria", "solution": true},
+                {"proposition": "Johannesburg", "solution": false},
+                {"proposition": "Le Cap", "solution": false},
+                {"proposition": "Durban", "solution": false}
+            ]
+        },
+        {
+            "question": "Quelle est la capitale de l'Argentine ?",
+            "reponses": [
+                {"proposition": "Buenos Aires", "solution": true},
+                {"proposition": "Cordoba", "solution": false},
+                {"proposition": "Rosario", "solution": false},
+                {"proposition": "Mendoza", "solution": false}
+            ]
+        },
+        {
+            "question": "Quelle est la capitale de la Corée du Sud ?",
+            "reponses": [
+                {"proposition": "Séoul", "solution": true},
+                {"proposition": "Busan", "solution": false},
+                {"proposition": "Incheon", "solution": false},
+                {"proposition": "Daegu", "solution": false}
+            ]
+        }
+    ]
+}

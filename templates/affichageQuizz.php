@@ -121,12 +121,12 @@ use Classes\Reponse;
             echo("<h1>$titre</h1>\n");
 
             $lesQuestions = $quizz->getLesQuestions();
-            echo "<form method='post' action='index.php?action=affichageQuizz'>";
+            
+            echo "<form method='post'>";
                 echo "<label for='nbQuestions'>Nombre de questions (5 par défaut) :</label><br>";
                 echo "<input type='number' id='nbQuestions' name='nbQuestions' min='1' value='" . $_POST['nbQuestions'] . "' max='" . count($lesQuestions) . "'>";
                 echo "<button type='submit' name='valider'>Valider</button>";
             echo "</form><br>";
-
 
             if (isset($_POST['nbQuestions']) && $_POST['nbQuestions'] > 0){
                 $nbQuestion = $_POST['nbQuestions'];

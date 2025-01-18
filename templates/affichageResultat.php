@@ -107,7 +107,12 @@ use Classes\Reponse;
             }
 
             echo "<br>";
-            echo "<a href='index.php?action=quizz'>Rejouer</a>";
+            phpinfo();
+            if ($_SERVER['HTTP_REFERER'] == 'http://localhost:8000/index.php?action=quizz'){
+                echo "<a href='index.php?action=quizz'>Rejouer</a>";
+            }else {
+                echo "<a href='index.php?action=importJSON'>Rejouer</a>";
+            }
             echo "<br>";
             echo "<a href='index.php?action=accueil'>Retour à l'accueil</a>";
         }
