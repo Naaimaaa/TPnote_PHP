@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'php/autoloader.php';
+require_once 'php/Autoloader.php';
 Autoloader::register();
 use utils\UserTools;
 use utils\DBConnector;
@@ -162,12 +162,12 @@ if (isset($_GET['function']) && $_GET['function'] === 'logout') {
             <section class="liste-quiz">
                 <h3> Nos derniers quiz </h3>
                 <hr/>
-                <?php foreach($listeQuizs as $quiz) {
+                <!-- <?php foreach($listeQuizs as $quiz) {
                     ?>
                 <div class="quiz-card">
                     <h3><?php echo $quiz['NOMQUIZ']?></h3>
                 </div>
-                <?php }  ?>   
+                <?php }  ?>   -->
             </section>  
         </main>
     </body>
