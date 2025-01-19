@@ -151,13 +151,6 @@ if (isset($_GET['function']) && $_GET['function'] === 'logout') {
                 <h1> Bienvenue sur Let's Quizz !</h1>
                 <h3> La meilleure plateforme de quiz en ligne</h3>
             </div>
-            <section class="recherche">
-                <h3>Rechercher un quiz</h3>
-                <form action="recherche.php" method="GET" class="search-bar">
-                    <input type="text" name="query" placeholder=" voyage, disney, harry potter..." class="search-input" required>
-                    <button type="submit" class="search-button">OK</button>
-                </form>
-            </section>
             <section class="liste-quiz">
                 <h3> Nos derniers quiz </h3>
                 <?php
