@@ -48,6 +48,12 @@ switch ($action) {
     case 'importJSON':
         require_once 'importJSON.php';
         break;
+    case 'statistiques':
+        require_once 'statistiques.php';
+        break;
+    case 'DBConnector':
+        require_once 'DBConnector.php';
+        break;
     case 'head':
         require_once 'global/head.php';
         break;

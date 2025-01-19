@@ -1,4 +1,5 @@
 {
+    "nom" : "Quizz sur les capitales",
     "QUIZZ": [
         {
             "question": "Quelle est la capitale de l'Allemagne ?",
@@ -93,7 +94,7 @@
         {
             "question": "Quelle est la capitale des États-Unis ?",
             "reponses": [
-                {"proposition": "Washington, D.C.", "solution": true},
+                {"proposition": "Washington DC", "solution": true},
                 {"proposition": "New York", "solution": false},
                 {"proposition": "Los Angeles", "solution": false},
                 {"proposition": "Chicago", "solution": false}

@@ -1,4 +1,5 @@
 {
+    "nom" : "Quizz sur Harry Potter",
     "QUIZZ": [
         {
             "question": "Quel est le prénom des parents de Harry Potter ?",
@@ -75,7 +76,7 @@
         {
             "question": "Qui est l'auteur des livres Harry Potter ?",
             "reponses": [
-                {"proposition": "J.K. Rowling", "solution": true},
+                {"proposition": "JK Rowling", "solution": true},
                 {"proposition": "Stephen King", "solution": false},
                 {"proposition": "Rick Riordan", "solution": false},
                 {"proposition": "Suzanne Collins", "solution": false}

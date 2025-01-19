@@ -2,6 +2,12 @@
 namespace templates;
 session_start();
 require_once 'php/providerJSON.php';
+
+use utils\UserTools;
+
+require_once 'php/utils/DBConnector.php';
+use utils\DBConnector;
+
 use Classes\Question;
 use Classes\Reponse;
 
@@ -53,6 +59,13 @@ use Classes\Reponse;
             echo "<h2>Votre score :</h2>";
             echo $_SESSION['score'] . '/' . $nbQuestions;
             echo "<br>";
+
+            
+            if (UserTools::isLogged()) {
+                $connexion = new DBConnector();
+                $reussite = (int)(($_SESSION['score'] / $nbQuestions)*100);
+                $connexion->addScore(strval($_SESSION['mail']),$reussite,$quizz->getQuizz());
+            }
 
             if ($_SESSION['score'] == $nbQuestions){
                 echo "Incroyable ! Tu es un véritable expert !";

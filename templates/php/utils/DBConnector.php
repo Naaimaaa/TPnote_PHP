@@ -1,5 +1,6 @@
 <?php
 declare(strict_types=1);
+
 namespace utils;
 use \PDO;
 
@@ -81,6 +82,34 @@ class DBConnector {
         $participations = $stmt->fetchAll();
         return $participations;
     }
+
+    /**
+    * addScore, ajoute le score d'un utilisateur
+    *
+    */
+    public function addScore(string $mail, int $score, string $nomQuizz){
+        $sql = "INSERT INTO PARTICIPER (EMAILU, NOMQUIZ, POINTS, DATEPART) VALUES (?, ?, ?, ?)";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([$mail, $nomQuizz, $score, date('Y-m-d')]);
+    }
+
+   
+    /**
+    * get_score, get l'ensemble des scores d'un utilisateur
+    *
+    * @return array la liste des scores
+    */
+    public function getScores($mail){
+        $sql = "SELECT * FROM PARTICIPER NATURAL JOIN UTILISATEUR WHERE EMAILU =?;";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([$mail]);        
+        $scores = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        if (!is_array($scores)) {
+            return [];
+        }
+        return $scores;
+    }
+
 }
 
 ?>

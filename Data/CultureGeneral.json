@@ -1,4 +1,5 @@
 {
+    "nom" : "Quizz sur la culture générale",
     "QUIZZ": [
         {
             "question": "Quelle est la planète la plus proche du Soleil ?",
@@ -43,15 +44,6 @@
                 {"proposition": "Le cœur", "solution": false},
                 {"proposition": "Le foie", "solution": false},
                 {"proposition": "Les reins", "solution": false}
-            ]
-        },
-        {
-            "question": "Quel est le plus grand désert du monde ?",
-            "reponses": [
-                {"proposition": "L'Antarctique", "solution": true},
-                {"proposition": "Le Sahara", "solution": false},
-                {"proposition": "Le désert de Gobi", "solution": false},
-                {"proposition": "Le désert du Kalahari", "solution": false}
             ]
         },
         {
