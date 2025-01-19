@@ -16,109 +16,95 @@ use Classes\Reponse;
         <title>Quiz</title>
         <style>
             /* Styles généraux */
-            body {
-                font-family: Arial, sans-serif;
-                background: linear-gradient(to right, #3498db, #2ecc71);
-                color: #333;
-                margin: 0;
-                padding: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-            }
-            
-            .container {
-                background: #fff;
-                border-radius: 10px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                padding: 40px;
-                width: 90%;
-                max-width: 600px;
-                text-align: center;
-            }
-            
-            h1 {
-                text-align: center;
-                color: #333;
-                font-size: 1.8rem;
-            }
-            
-            /* Formulaires */
-            form {
-                display: flex;
-                flex-direction: column;
-                gap: 15px;
-                align-items: center;
-            }
-            
-            label {
-                font-size: 1rem;
-                font-weight: bold;
-            }
-            
-            input[type='number'], input[type='radio'] {
-                margin-top: 5px;
-            }
-            
-            button {
-                padding: 10px 20px;
-                border: none;
-                border-radius: 5px;
-                background: #4facfe;
-                color: white;
-                font-size: 1rem;
-                cursor: pointer;
-                transition: background 0.3s ease;
-            }
-            
-            button:hover {
-                background: #00c6fb;
-            }
-            
-            /* Questions */
-            .question {
-                font-size: 1.2rem;
-                font-weight: bold;
-                color: #444;
-                margin-bottom: 10px;
-            }
-            
-            .lesReponses {
-                margin-bottom: 20px;
-            }
-            
-            .reponse {
-                margin-left: 10px;
-                font-size: 1rem;
-            }
-            
-            /* Bouton de soumission */
-            .submit-btn {
-                width: 100%;
-                padding: 15px;
-                font-size: 1.1rem;
-                background: #ff416c;
-                transition: background 0.3s ease;
-            }
-            
-            .submit-btn:hover {
-                background: #ff4b2b;
-            }
-            
-            /* Responsiveness */
-            @media (max-width: 768px) {
-                .container {
-                    padding: 20px;
-                }
-                h1 {
-                    font-size: 1.5rem;
-                }
-                .question, .reponse {
-                    font-size: 1rem;
-                }
-            }
-            
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f5f5f5;
+}
+
+.container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 800px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+/* Formulaires */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+input[type='text'], input[type='email'], input[type='tel'], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #4caf50;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+/* Champs obligatoires */
+label.required::after {
+    content: ' *';
+    color: red;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    label, input, textarea, button {
+        font-size: 1rem;
+    }
+}
+
 
         </style>
     </head>
