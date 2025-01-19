@@ -1,15 +1,14 @@
-# TPnote_PHP
-
+# TP noté PHP
 AKTHAR Naima  
 VALIN Ophélie
 Groupe 21A
 
 ## Commandes utiles
-#### Charger la base de données
+### Charger la base de données
 - Se mettre dans le dossier `DataBase/` et executer : `php init_db.php`
-#### Lancer le site
+### Lancer le site
 - Se mettre dans le dossier `templates/` et executer : `php -S localhost:8000 index.php`
-#### Tester l'import de quizz
+### Tester l'import de quizz
 - Il y a des fichiers JSON dans le dossier `Data/`
 
 ## Contraintes imposées réalisées 
@@ -31,5 +30,5 @@ Groupe 21A
 - Possibilité de faire un quizz, voir son score et la correction.
 
 ## Documentations
-- MCD de la base de données dans : `DataBase/MCD/`
-- Diagramme des classes php dans : `diagramme/`
+- MCD de la base de données dans le dossier : `DataBase/MCD/`
+- Diagramme des classes php dans le dossier : `diagramme/`
