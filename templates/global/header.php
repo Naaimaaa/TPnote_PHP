@@ -1,9 +1,7 @@
 <?php
 namespace global\header
 ?>
-
 <style>
-
     body {
         font-family: Arial, sans-serif;
         line-height: 1.6;
@@ -75,8 +73,6 @@ namespace global\header
         display: inline-block; 
     }
     
-
-
     /* Responsiveness du site */
 
     .burger-menu {
@@ -91,7 +87,6 @@ namespace global\header
         height: 3px;
         background-color: white;
     }
-
 
     #mon-compte {
         display: none;

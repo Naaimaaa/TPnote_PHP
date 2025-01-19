@@ -1,10 +1,8 @@
 <?php
 session_start();
-//require_once 'templates/php/autoloader.php';
-//Autoloader::register();
-
-// index.php
 ?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>

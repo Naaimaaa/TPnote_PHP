@@ -56,7 +56,7 @@ class UserTools {
 
     public static function requireLogin() {
         if (!self::isLogged()) {
-            header('Location: connexion.php');
+            header('Location: index.php?action=connexion');
             exit();
         }
     }

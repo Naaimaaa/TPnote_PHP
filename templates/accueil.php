@@ -4,9 +4,7 @@ require_once 'php/Autoloader.php';
 Autoloader::register();
 use utils\UserTools;
 use utils\DBConnector;
-if (isset($_GET['function']) && $_GET['function'] === 'logout') {
-    UserTools::logout();
-}
+
 
 // Décommenter la ligne suivante si connexion à BD fonctionne
 //$listeQuizs = $connexion->get_participations($_SESSION['user']['email']);
@@ -129,17 +127,17 @@ if (isset($_GET['function']) && $_GET['function'] === 'logout') {
                 font-size: 12px;
             }
         }
-
-
     </style>
     <body>
         <?php
             //Affichage du header différent selon connexion ou non 
             if (UserTools::isLogged()) {
                 include 'global/headerCo.php';
+                error_log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
             }
             else {
                 include 'global/header.php';
+                error_log('bbbbbbbbbbbbbbbbbbbbbbbbbbb');
             }
 
          ?>
