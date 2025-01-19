@@ -4,7 +4,7 @@ AKTHAR Naima
 VALIN Ophélie
 Groupe 21A
 
-## Commandes utiles
+## Commandes pour lancer l'application
 ##### Charger la base de données
 - Se mettre dans le dossier `DataBase/` et executer : `php init_db.php`
 ##### Lancer le site
