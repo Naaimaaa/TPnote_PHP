@@ -15,117 +15,107 @@ use Classes\Reponse;
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Quiz</title>
         <style>
-            /* Appliquer le fond avec un dégradé linéaire agréable */
-body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom, #2c3e50, #34495e, #2980b9, #6dd5fa);
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-    min-height: 100vh;
-    margin: 0;
-}
-
-/* Conteneur principal du formulaire */
-form {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 40px;
-    width: 60%;
-    margin: auto;
-    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(10px);
-    text-align: left;
-}
-
-/* Titre */
-h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-    color: #f1c40f;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-/* Style des labels et questions */
-label, p {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #ecf0f1;
-    margin-bottom: 10px;
-}
-
-/* Conteneur des questions */
-.question {
-    font-size: 1.3em;
-    font-weight: bold;
-    color: #ecf0f1;
-    margin-bottom: 10px;
-}
-
-/* Conteneur pour chaque question et ses réponses */
-.lesReponses {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px;
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 10px;
-    margin-bottom: 25px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Champs de formulaire (input) */
-input[type="number"], input[type="radio"] {
-    accent-color: #f1c40f;
-    font-size: 1.2em;
-    padding: 10px;
-    border-radius: 8px;
-    border: none;
-    text-align: center;
-    outline: none;
-}
-
-input[type="number"] {
-    width: 80px;
-}
-
-/* Style des réponses */
-.reponse {
-    font-size: 1.2em;
-    margin-left: 10px;
-    display: inline-block;
-}
-
-/* Boutons */
-button {
-    background: linear-gradient(to right, #f1c40f, #e67e22);
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.3em;
-    font-weight: bold;
-    color: white;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Effet au survol du bouton */
-button:hover {
-    background: linear-gradient(to right, #e67e22, #f1c40f);
-    transform: scale(1.05);
-}
-
-/* Style du bouton de validation */
-.submit-btn {
-    background: linear-gradient(to right, #2ecc71, #27ae60);
-}
-
-.submit-btn:hover {
-    background: linear-gradient(to right, #27ae60, #2ecc71);
-}
-
-
+            /* Styles généraux */
+            body {
+                font-family: Arial, sans-serif;
+                background: linear-gradient(to right, #4facfe, #00f2fe);
+                color: #333;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            
+            .container {
+                background: #fff;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                padding: 40px;
+                width: 90%;
+                max-width: 600px;
+            }
+            
+            h1 {
+                text-align: center;
+                color: #333;
+            }
+            
+            /* Formulaires */
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            label {
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+            
+            input[type='number'], input[type='radio'] {
+                margin-top: 5px;
+            }
+            
+            button {
+                padding: 12px;
+                border: none;
+                border-radius: 5px;
+                background: #4facfe;
+                color: white;
+                font-size: 1.1em;
+                cursor: pointer;
+                transition: background 0.3s ease;
+            }
+            
+            button:hover {
+                background: #00c6fb;
+            }
+            
+            /* Questions */
+            .question {
+                font-size: 1.3em;
+                font-weight: bold;
+                color: #444;
+                margin-bottom: 10px;
+            }
+            
+            .lesReponses {
+                margin-bottom: 20px;
+            }
+            
+            .reponse {
+                margin-left: 10px;
+                font-size: 1.1em;
+            }
+            
+            /* Bouton de soumission */
+            .submit-btn {
+                width: 100%;
+                padding: 15px;
+                font-size: 1.2em;
+                background: #ff416c;
+                transition: background 0.3s ease;
+            }
+            
+            .submit-btn:hover {
+                background: #ff4b2b;
+            }
+            
+            /* Responsiveness */
+            @media (max-width: 768px) {
+                .container {
+                    padding: 20px;
+                }
+                h1 {
+                    font-size: 1.5em;
+                }
+                .question, .reponse {
+                    font-size: 1.1em;
+                }
+            }
+            
 
         </style>
     </head>
