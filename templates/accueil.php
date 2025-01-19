@@ -133,7 +133,6 @@ if (isset($_GET['function']) && $_GET['function'] === 'logout') {
 
     </style>
     <body>
-
         <?php
             //Affichage du header différent selon connexion ou non 
             if (UserTools::isLogged()) {

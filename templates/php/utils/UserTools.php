@@ -23,7 +23,7 @@ class UserTools {
     public static function login($email, $password) {
         $user = self::checkDB($email, $password);
         $status = false;
-        if ($user) {
+        if (count($user) > 0) {
             $_SESSION['user'] = array('email' => $user['EMAILU'], 'token' => self::generateToken(), 'nom' => $user['NOMU'], 'prenom' => $user['PRENOMU']);
             $status = true;
         }
@@ -74,9 +74,11 @@ class UserTools {
             $hash = hash('sha1', $password);
             $query = $db->prepare('INSERT INTO UTILISATEUR VALUES(:email, :passwrd ,:nom, :prenom)');
             $query->execute(array('email' => $email, 'passwrd' => $hash, 'nom' => $nom, 'prenom' => $prenom));
+            return true;
         }
         else {
             echo "Une erreur s'est produite lors de la tentive d'ajout d'un utilisateur, vérifiez que cet utilisateur n'existe pas déjà";
+            return false;
         }
     }
 }

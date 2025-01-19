@@ -154,7 +154,7 @@ namespace global\headerCo
 </script>
 <header>
     <div class="logo">
-        <a href="accueil.php">
+        <a href="index.php?action=accueil">
             <img src="#" alt="logo">
         </a>
     </div>
@@ -164,16 +164,10 @@ namespace global\headerCo
         <div></div>
     </div>
     <nav id="menu">
-        <a href="../statistiques.php" aria-disabled="true"> Statistiques </a>
-        <a href="#" aria-disabled="true"> Mes quiz </a>
-        <a href="#"> Contact </a>
+        <a href="index.php?action=Mes statistiques" aria-disabled="true"> Statistiques </a>
     </nav>
-    <div id="mon-compte" >
-        <div><a href="accueil.php?function=logout">Se déconnecter</a></div>
-        <div><a href="#">Aide</a></div>
-    </div>
     <div class="user-space" onclick="menuDisplay()">
-        <img src="img/user.webp" alt="icone-user">
+        <img src="../img/icone.png" alt="icone-user">
         <p>Mon compte</p>
     </div>
 </header>

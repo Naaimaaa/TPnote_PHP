@@ -2,9 +2,6 @@
 require_once 'php/Autoloader.php';
 Autoloader::register();
 
-if (isset($_GET['action']) && $_GET['action'] === "affichageQuizz") {
-    require_once 'affichageQuizz.php';
-}
 
 $action = $_REQUEST['action'] ?? 'bienvenue';
 
@@ -36,8 +33,14 @@ switch ($action) {
     case 'connexion':
         require_once 'connexion.php';
         break;
+    case 'connexionBD':
+        require_once 'connexionBD.php';
+        break;
     case 'inscription':
         require_once 'inscription.php';
+        break;
+    case 'inscriptionBD':
+        require_once 'inscriptionBD.php';
         break;
     case 'importJSON':
         require_once 'importJSON.php';
