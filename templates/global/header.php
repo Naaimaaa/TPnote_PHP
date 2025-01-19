@@ -1,9 +1,7 @@
 <?php
 namespace global\header
 ?>
-
 <style>
-
     body {
         font-family: Arial, sans-serif;
         line-height: 1.6;
@@ -75,8 +73,6 @@ namespace global\header
         display: inline-block; 
     }
     
-
-
     /* Responsiveness du site */
 
     .burger-menu {
@@ -91,7 +87,6 @@ namespace global\header
         height: 3px;
         background-color: white;
     }
-
 
     #mon-compte {
         display: none;
@@ -171,17 +166,13 @@ namespace global\header
         <div></div>
     </div>
     <nav id="menu">
-        <a href="#" aria-disabled="true"> Statistiques </a>
-        <a href="#" aria-disabled="true"> Mes quiz </a>
-        <a href="#"> Contact </a>
     </nav>
     <div id="mon-compte" >
         <div><a href="index.php?action=connexion">Se connecter</a></div>
         <div><a href="index.php?action=inscription">S'inscrire</a></div>
-        <div><a href="#">Aide</a></div>
     </div>
     <div class="user-space" onclick="menuDisplay()">
-        <img src="img/user.webp" alt="icone-user">
-        <p>Mon compte</p>
+        <img src="../img/icone.png" alt="icone-user">
+        <p>S'identifier</p>
     </div>
 </header>

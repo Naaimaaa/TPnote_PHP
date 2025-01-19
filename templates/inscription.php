@@ -3,15 +3,7 @@ session_start();
 require_once 'php/Autoloader.php';
 Autoloader::register();
 use utils\UserTools;
-if (!empty($_POST['email']) && !empty($_POST['password'])) {
-    $register = UserTools::register($_POST['email'], $_POST['password'], $_POST['nom'], $_POST['prenom']);
-    if ($register == true) {
-        header('Location: accueil.php');
-        } else {
-        header('Location: inscription.php?error=1');
-        }
 
-}
 
 ?>
 <!DOCTYPE html>
@@ -78,7 +70,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
         <section class="inscription">
             <div class="form-container">
                 <h1>Inscription</h1>
-                <form action="index.php?action=connexion" method="POST">
+                <form action="index.php?action=inscriptionBD" method="POST">
                     <label for="nom">Nom</label>
                     <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
 

@@ -1,10 +1,8 @@
 <?php
 session_start();
-//require_once 'templates/php/autoloader.php';
-//Autoloader::register();
-
-// index.php
 ?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -83,8 +81,9 @@ session_start();
             min-height: 100%;
             object-fit: cover; /* Évite que la vidéo soit déformée */
             overflow: hidden;
+            background-color: #43319D; /* Fond violet si la vidéo ne se charge pas */
         }
-
+      
     </style>
 </head>
 <body>

@@ -4,9 +4,7 @@ require_once 'php/Autoloader.php';
 Autoloader::register();
 use utils\UserTools;
 use utils\DBConnector;
-if (isset($_GET['function']) && $_GET['function'] === 'logout') {
-    UserTools::logout();
-}
+
 
 // Décommenter la ligne suivante si connexion à BD fonctionne
 //$listeQuizs = $connexion->get_participations($_SESSION['user']['email']);
@@ -129,18 +127,17 @@ if (isset($_GET['function']) && $_GET['function'] === 'logout') {
                 font-size: 12px;
             }
         }
-
-
     </style>
     <body>
-
         <?php
             //Affichage du header différent selon connexion ou non 
             if (UserTools::isLogged()) {
                 include 'global/headerCo.php';
+                error_log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
             }
             else {
                 include 'global/header.php';
+                error_log('bbbbbbbbbbbbbbbbbbbbbbbbbbb');
             }
 
          ?>
@@ -151,13 +148,6 @@ if (isset($_GET['function']) && $_GET['function'] === 'logout') {
                 <h1> Bienvenue sur Let's Quizz !</h1>
                 <h3> La meilleure plateforme de quiz en ligne</h3>
             </div>
-            <section class="recherche">
-                <h3>Rechercher un quiz</h3>
-                <form action="recherche.php" method="GET" class="search-bar">
-                    <input type="text" name="query" placeholder=" voyage, disney, harry potter..." class="search-input" required>
-                    <button type="submit" class="search-button">OK</button>
-                </form>
-            </section>
             <section class="liste-quiz">
                 <h3> Nos derniers quiz </h3>
                 <?php
