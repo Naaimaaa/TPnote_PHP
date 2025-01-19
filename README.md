@@ -9,7 +9,7 @@ Groupe 21A
 - Se mettre dans le dossier `DataBase/` et executer : `php init_db.php`
 ##### Lancer le site
 - Se mettre dans le dossier `templates/` et executer : `php -S localhost:8000 index.php`
-##### Tester l'import de quizz
+##### Pour tester l'import de quizz
 - Il y a des fichiers JSON dans le dossier `Data/`
 
 ## Contraintes imposées réalisées 
