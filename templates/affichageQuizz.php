@@ -18,7 +18,7 @@ use Classes\Reponse;
             /* Styles généraux */
             body {
                 font-family: Arial, sans-serif;
-                background: linear-gradient(to right, #4facfe, #00f2fe);
+                background: linear-gradient(to right, #3498db, #2ecc71);
                 color: #333;
                 margin: 0;
                 padding: 0;
@@ -35,11 +35,13 @@ use Classes\Reponse;
                 padding: 40px;
                 width: 90%;
                 max-width: 600px;
+                text-align: center;
             }
             
             h1 {
                 text-align: center;
                 color: #333;
+                font-size: 1.8rem;
             }
             
             /* Formulaires */
@@ -47,10 +49,11 @@ use Classes\Reponse;
                 display: flex;
                 flex-direction: column;
                 gap: 15px;
+                align-items: center;
             }
             
             label {
-                font-size: 1.2em;
+                font-size: 1rem;
                 font-weight: bold;
             }
             
@@ -59,12 +62,12 @@ use Classes\Reponse;
             }
             
             button {
-                padding: 12px;
+                padding: 10px 20px;
                 border: none;
                 border-radius: 5px;
                 background: #4facfe;
                 color: white;
-                font-size: 1.1em;
+                font-size: 1rem;
                 cursor: pointer;
                 transition: background 0.3s ease;
             }
@@ -75,7 +78,7 @@ use Classes\Reponse;
             
             /* Questions */
             .question {
-                font-size: 1.3em;
+                font-size: 1.2rem;
                 font-weight: bold;
                 color: #444;
                 margin-bottom: 10px;
@@ -87,14 +90,14 @@ use Classes\Reponse;
             
             .reponse {
                 margin-left: 10px;
-                font-size: 1.1em;
+                font-size: 1rem;
             }
             
             /* Bouton de soumission */
             .submit-btn {
                 width: 100%;
                 padding: 15px;
-                font-size: 1.2em;
+                font-size: 1.1rem;
                 background: #ff416c;
                 transition: background 0.3s ease;
             }
@@ -109,10 +112,10 @@ use Classes\Reponse;
                     padding: 20px;
                 }
                 h1 {
-                    font-size: 1.5em;
+                    font-size: 1.5rem;
                 }
                 .question, .reponse {
-                    font-size: 1.1em;
+                    font-size: 1rem;
                 }
             }
             
