@@ -107,12 +107,15 @@ use Classes\Reponse;
             }
 
             echo "<br>";
-            phpinfo();
             if ($_SERVER['HTTP_REFERER'] == 'http://localhost:8000/index.php?action=quizz'){
                 echo "<a href='index.php?action=quizz'>Rejouer</a>";
-            } else {
-                echo "<a href='index.php?action=importJSON'>Rejouer</a>";
-            }
+            } 
+            if ($_SERVER['HTTP_REFERER'] == 'http://localhost:8000/index.php?action=quizz2'){
+                echo "<a href='index.php?action=quizz2'>Rejouer</a>";
+            } 
+            if ($_SERVER['HTTP_REFERER'] == 'http://localhost:8000/index.php?action=quizz3'){
+                echo "<a href='index.php?action=quizz3'>Rejouer</a>";
+            } 
             echo "<br>";
             echo "<a href='index.php?action=accueil'>Retour à l'accueil</a>";
         }

@@ -166,8 +166,13 @@ if (isset($_GET['function']) && $_GET['function'] === 'logout') {
                     echo "<input type='file' id='quizzJSON' name='quizzJSON' accept='application/json'/>";
                     echo "<button type='submit' name='importQuizz'>Importer</button>";
                 echo "</form>";
-                <a href="index.php?action=quizz" class="start-btn">Quizz sur le php</a>
-
+                echo "<br/>";
+                echo "<a href='index.php?action=quizz' class='start-btn'>Quizz sur le php</a>";
+                echo "<br/>";
+                echo "<a href='index.php?action=quizz2' class='start-btn'>Quizz sur l'informatique</a>";
+                echo "<br/>";
+                echo "<a href='index.php?action=quizz3' class='start-btn'>Quizz sur la culture génerale</a>";
+                echo "<br/>";
                 ?>
             </section>  
         </main>

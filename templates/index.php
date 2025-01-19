@@ -18,6 +18,12 @@ switch ($action) {
     case 'quizz':
         require_once 'quizz.php';
         break;
+    case 'quizz2':
+        require_once 'quizz2.php';
+        break;
+    case 'quizz3':
+        require_once 'quizz3.php';
+        break;
     case 'affichageQuizz':
         require_once 'affichageQuizz.php';
         break;
