@@ -15,99 +15,116 @@ use Classes\Reponse;
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Quiz</title>
         <style>
-            /* Appliquer le fond avec un dégradé horizontal */
-            body {
-                font-family: 'Arial', sans-serif;
-                background: linear-gradient(to bottom, #0d0221, #3d087b, #2768c9, #00aaff);
-                color: white;
-                text-align: center;
-                padding: 20px;
-                min-height: 100vh;
-            }
+            /* Appliquer le fond avec un dégradé linéaire agréable */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #2c3e50, #34495e, #2980b9, #6dd5fa);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+    margin: 0;
+}
 
-            /* Conteneur principal */
-            form {
-                font-family: 'Arial', sans-serif;
-                font-size: 16px;
-                background: rgba(255, 255, 255, 0.2);
-                border-radius: 12px;
-                padding: 25px;
-                margin: auto;
-                width: 80%; /* Augmenter la largeur pour placer les éléments correctement */
-                box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-                text-align: left; /* Aligner le texte à gauche */
-            }
+/* Conteneur principal du formulaire */
+form {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    width: 60%;
+    margin: auto;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    text-align: left;
+}
 
-            /* Titre */
-            h1 {
-                font-size: 4.5em;
-                margin-bottom: 25px;
-                color: #ffffff;
-                text-align: center;
-            }
+/* Titre */
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #f1c40f;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
 
-            /* Labels et questions */
-            label, p {
-                font-size: 1.7em;
-                font-weight: bold;
-                margin-bottom: 10px;
-            }
+/* Style des labels et questions */
+label, p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ecf0f1;
+    margin-bottom: 10px;
+}
 
-            /* Conteneur pour chaque question et ses réponses */
-            .lesReponses {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                margin-bottom: 20px;
-            }
+/* Conteneur des questions */
+.question {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #ecf0f1;
+    margin-bottom: 10px;
+}
 
-            /* Style des questions */
-            .question {
-                font-size: 1.5em;
-                font-weight: bold;
-                text-align: left;
-                margin-bottom: 10px;
-                color: white;
-            }
+/* Conteneur pour chaque question et ses réponses */
+.lesReponses {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
 
-            /* Champs de formulaire */
-            input[type="number"] {
-                width: 60px;
-                padding: 5px;
-                border-radius: 5px;
-                border: none;
-                font-size: 1.2em;
-                text-align: center;
-                margin-right: 10px;
-            }
+/* Champs de formulaire (input) */
+input[type="number"], input[type="radio"] {
+    accent-color: #f1c40f;
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    outline: none;
+}
 
-            /* Style des réponses */
-            .reponse {
-                font-size: 1.2em;
-                margin-left: 15px;
-            }
+input[type="number"] {
+    width: 80px;
+}
 
-            /* Boutons */
-            button {
-                background: #00c9ff;
-                border: none;
-                padding: 10px 20px;
-                font-size: 1.2em;
-                font-weight: bold;
-                color: white;
-                border-radius: 50px;
-                cursor: pointer;
-                margin-top: 15px;
-            }
+/* Style des réponses */
+.reponse {
+    font-size: 1.2em;
+    margin-left: 10px;
+    display: inline-block;
+}
 
-            /* Bouton de validation */
-            .submit-btn {
-                background: #ff7eb3;
-            }
+/* Boutons */
+button {
+    background: linear-gradient(to right, #f1c40f, #e67e22);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
 
-            .submit-btn:hover {
-                background: #0086c3;
-            }
+/* Effet au survol du bouton */
+button:hover {
+    background: linear-gradient(to right, #e67e22, #f1c40f);
+    transform: scale(1.05);
+}
+
+/* Style du bouton de validation */
+.submit-btn {
+    background: linear-gradient(to right, #2ecc71, #27ae60);
+}
+
+.submit-btn:hover {
+    background: linear-gradient(to right, #27ae60, #2ecc71);
+}
+
 
 
         </style>
