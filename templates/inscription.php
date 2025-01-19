@@ -6,9 +6,9 @@ use utils\UserTools;
 if (!empty($_POST['email']) && !empty($_POST['password'])) {
     $register = UserTools::register($_POST['email'], $_POST['password'], $_POST['nom'], $_POST['prenom']);
     if ($register == true) {
-        header('Location : accueil.php');
+        header('Location: accueil.php');
         } else {
-        header('Location : inscription.php?error=1');
+        header('Location: inscription.php?error=1');
         }
 
 }

@@ -9,6 +9,10 @@ class DBConnector {
         $this->pdo = new PDO('sqlite:' . "database.db");
     }
     
+    public function getDB(): PDO {
+        return $this->pdo;
+    }
+    
     /**
      * get_utilisateurs, get l'ensemble des utlisateurs de la BD
      *
