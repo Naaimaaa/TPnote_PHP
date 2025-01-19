@@ -17,7 +17,6 @@ use utils\DBConnector;
     include 'global/head.php';
 ?>
     <style>
-
         .bienvenue {
             text-align: center;
             background-color: #392989;
@@ -26,107 +25,105 @@ use utils\DBConnector;
             padding: 20px 0;
             margin-top : 40px;
             position : relative;
-            
         }
-
+        
         .bienvenue h1 {
             font-size: 80px ;
             margin : 0;
         }
-        
+                
         .bienvenue h3, 
         .recherche h3,
         .liste-quiz h3 {
             font-size: 30px;
             margin : 10px 0;
         }
-
-        .recherche {
-            margin : 20px, auto;
-            width: 90%; /* Largeur relative */
-            max-width: 1000px; /* Limite maximale */
-            margin-left : 6rem;
-            margin-top : 20px;
-        }
-
-
-        .search-bar input {
-            border-radius : 5px;
-            width: 70%; /* Largeur relative */
-            max-width: 700px; /* Limite maximale */
-            height: 20px;
-            padding: 8px;
-            font-size: 16px;
-
-        }
-
-        .search-button {
-            margin-left: 10px;
-            background-color: #CC3D6A;
-            border-radius: 8px;
-            border-style: none;
-            box-sizing: border-box;
-            color: #FFFFFF;
-            cursor: pointer;
-            display: inline-block;
-            font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-            font-size: 16px;
-            font-weight: 500;
-            height: 40px;
-            line-height: 20px;
-            list-style: none;
-            margin: 0;
-            outline: none;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            transition: color 100ms;
-            vertical-align: baseline;
-            user-select: none;
-            -webkit-user-select: none;
-            touch-action: manipulation;
-
-        }
-
+        
+        /* Section des quiz */
         .liste-quiz {
-            margin-left: 95px;
-            margin-top : 100px;
+            margin: 50px auto;
+            padding: 20px;
+            width: 90%;
+            max-width: 800px;
+            background: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
         
-        hr {
-            width : 70%;
-            position : fixed;
+        .liste-quiz h3 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #392989;
+            padding-bottom: 10px;
         }
-
-
-        .search-button:hover,
-        .search-button:focus {
+        
+        .liste-quiz form {
+            margin-bottom: 20px;
+        }
+        
+        .liste-quiz label {
+            font-size: 18px;
+            color: #555;
+        }
+        
+        .liste-quiz input[type='file'] {
+            margin-top: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .liste-quiz button {
+            margin-top: 10px;
+            background-color: #CC3D6A;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .liste-quiz button:hover {
             background-color: #F082AC;
         }
-
+        
+        .liste-quiz .start-btn {
+            display: block;
+            background: #2575fc;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 18px;
+            margin: 10px 0;
+            transition: background 0.3s ease;
+        }
+        
+        .liste-quiz .start-btn:hover {
+            background: #6a11cb;
+        }
+        
         @media (max-width: 768px) {
-            .search-bar input {
-                width: 60%; /* Réduction pour écrans moyens */
-                font-size: 14px;
+            .liste-quiz h3 {
+                font-size: 24px;
             }
-
-            .search-button {
-                padding: 8px 16px;
+            .liste-quiz button {
                 font-size: 14px;
             }
         }
-
+        
         @media (max-width: 480px) {
-            .search-bar input {
-                width: 80%; /* Réduction pour petits écrans */
-                font-size: 12px;
+            .liste-quiz h3 {
+                font-size: 20px;
             }
-
-            .search-button {
-                padding: 6px 12px;
+            .liste-quiz button {
                 font-size: 12px;
             }
         }
+        
     </style>
     <body>
         <?php
