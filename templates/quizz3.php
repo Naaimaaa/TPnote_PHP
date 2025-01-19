@@ -2,6 +2,6 @@
 require_once 'affichageQuizz.php';
 use function templates\affichageQuizz;
         
-$_SESSION["fichierJSON"] = "../Data/php.json";
+$_SESSION["fichierJSON"] = "../Data/CultureGeneral.json";
 affichageQuizz($_SESSION["fichierJSON"]);
 ?>

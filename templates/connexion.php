@@ -123,7 +123,7 @@ else if (!empty($_POST['login']) || !empty($_POST['password'])) {
                 }
                 ?>
                 </form>
-                <p class="inscrire"> Pas encore de compte ? <a href="inscription.php"> Inscrivez-vous dès maintenant !</a></p>   
+                <p class="inscrire"> Pas encore de compte ? <a href="index.php?action=inscription"> Inscrivez-vous dès maintenant !</a></p>   
             </section>
 
         </main>

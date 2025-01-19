@@ -1,0 +1,85 @@
+{
+    "QUIZZ": [
+        {
+            "question": "Qui est considéré comme le père de l'informatique ?",
+            "reponses": [
+                {"proposition": "Alan Turing", "solution": true},
+                {"proposition": "Bill Gates", "solution": false},
+                {"proposition": "Steve Jobs", "solution": false},
+                {"proposition": "Charles Babbage", "solution": false}
+            ]
+        },
+        {
+            "question": "Quel est le premier langage de programmation de haut niveau ?",
+            "reponses": [
+                {"proposition": "Fortran", "solution": true},
+                {"proposition": "C", "solution": false},
+                {"proposition": "Pascal", "solution": false},
+                {"proposition": "Python", "solution": false}
+            ]
+        },
+        {
+            "question": "Quelle entreprise a développé le système d'exploitation Windows ?",
+            "reponses": [
+                {"proposition": "Microsoft", "solution": true},
+                {"proposition": "Apple", "solution": false},
+                {"proposition": "Google", "solution": false},
+                {"proposition": "IBM", "solution": false}
+            ]
+        },
+        {
+            "question": "Quel est le principal langage utilisé pour développer des pages web dynamiques côté client ?",
+            "reponses": [
+                {"proposition": "JavaScript", "solution": true},
+                {"proposition": "PHP", "solution": false},
+                {"proposition": "Python", "solution": false},
+                {"proposition": "C++", "solution": false}
+            ]
+        },
+        {
+            "question": "Que signifie l'acronyme HTML ?",
+            "reponses": [
+                {"proposition": "HyperText Markup Language", "solution": true},
+                {"proposition": "Hyperlink and Text Marking Language", "solution": false},
+                {"proposition": "High Tech Machine Learning", "solution": false},
+                {"proposition": "Home Tool Management Language", "solution": false}
+            ]
+        },
+        {
+            "question": "Quel est le langage utilisé pour manipuler les bases de données relationnelles ?",
+            "reponses": [
+                {"proposition": "SQL", "solution": true},
+                {"proposition": "Java", "solution": false},
+                {"proposition": "C#", "solution": false},
+                {"proposition": "Ruby", "solution": false}
+            ]
+        },
+        {
+            "question": "Quelle est la principale fonction d'un pare-feu informatique ?",
+            "reponses": [
+                {"proposition": "Protéger un réseau contre les intrusions", "solution": true},
+                {"proposition": "Accélérer la vitesse d'Internet", "solution": false},
+                {"proposition": "Supprimer les virus des fichiers", "solution": false},
+                {"proposition": "Récupérer des fichiers supprimés", "solution": false}
+            ]
+        },
+        {
+            "question": "Quel système d'exploitation est basé sur le noyau Linux ?",
+            "reponses": [
+                {"proposition": "Ubuntu", "solution": true},
+                {"proposition": "Windows 10", "solution": false},
+                {"proposition": "macOS", "solution": false},
+                {"proposition": "MS-DOS", "solution": false}
+            ]
+        },
+        {
+            "question": "Quelle est l'unité de stockage la plus petite en informatique ?",
+            "reponses": [
+                {"proposition": "Bit", "solution": true},
+                {"proposition": "Byte", "solution": false},
+                {"proposition": "Kilobyte", "solution": false},
+                {"proposition": "Megabyte", "solution": false}
+            ]
+        }
+    ]
+}

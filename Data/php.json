@@ -1,0 +1,94 @@
+{
+    "QUIZZ": [
+        {
+            "question": "Que signifie PHP ?",
+            "reponses": [
+                {"proposition": "Hypertext Preprocessor", "solution": true},
+                {"proposition": "Personal Home Page", "solution": false},
+                {"proposition": "Programming Hypertext Protocol", "solution": false},
+                {"proposition": "Pre Hypertext Processor", "solution": false}
+            ]
+        },
+        {
+            "question": "Quelle syntaxe est utilisée pour déclarer une variable en PHP ?",
+            "reponses": [
+                {"proposition": "$variable", "solution": true},
+                {"proposition": "var variable", "solution": false},
+                {"proposition": "let variable", "solution": false},
+                {"proposition": "variable", "solution": false}
+            ]
+        },
+        {
+            "question": "Quelle fonction permet d'afficher du texte en PHP ?",
+            "reponses": [
+                {"proposition": "echo", "solution": true},
+                {"proposition": "printText", "solution": false},
+                {"proposition": "display", "solution": false},
+                {"proposition": "write", "solution": false}
+            ]
+        },
+        {
+            "question": "Quelle est l'extension principale d'un fichier PHP ?",
+            "reponses": [
+                {"proposition": ".php", "solution": true},
+                {"proposition": ".html", "solution": false},
+                {"proposition": ".js", "solution": false},
+                {"proposition": ".css", "solution": false}
+            ]
+        },
+        {
+            "question": "Quel symbole est utilisé pour commenter une seule ligne en PHP ?",
+            "reponses": [
+                {"proposition": "//", "solution": true},
+                {"proposition": "/* */", "solution": false},
+                {"proposition": "#", "solution": false},
+                {"proposition": "--", "solution": false}
+            ]
+        },
+        {
+            "question": "Quelle superglobale est utilisée pour récupérer des données envoyées via un formulaire en méthode POST ?",
+            "reponses": [
+                {"proposition": "$_POST", "solution": true},
+                {"proposition": "$_GET", "solution": false},
+                {"proposition": "$_SESSION", "solution": false},
+                {"proposition": "$_REQUEST", "solution": false}
+            ]
+        },
+        {
+            "question": "Quelle fonction permet d'inclure un fichier en PHP sans générer d'erreur fatale si le fichier est introuvable ?",
+            "reponses": [
+                {"proposition": "include", "solution": true},
+                {"proposition": "require", "solution": false},
+                {"proposition": "import", "solution": false},
+                {"proposition": "load", "solution": false}
+            ]
+        },
+        {
+            "question": "Quel est le type de base d'un tableau en PHP ?",
+            "reponses": [
+                {"proposition": "array", "solution": true},
+                {"proposition": "list", "solution": false},
+                {"proposition": "dictionary", "solution": false},
+                {"proposition": "collection", "solution": false}
+            ]
+        },
+        {
+            "question": "Quelle est la fonction utilisée pour établir une connexion à une base de données MySQL en PHP (MySQLi) ?",
+            "reponses": [
+                {"proposition": "mysqli_connect", "solution": true},
+                {"proposition": "mysql_connect", "solution": false},
+                {"proposition": "db_connect", "solution": false},
+                {"proposition": "connect_db", "solution": false}
+            ]
+        },
+        {
+            "question": "Quelle est la version actuelle recommandée de PHP (2025) ?",
+            "reponses": [
+                {"proposition": "PHP 8.x", "solution": true},
+                {"proposition": "PHP 7.4", "solution": false},
+                {"proposition": "PHP 6", "solution": false},
+                {"proposition": "PHP 5.6", "solution": false}
+            ]
+        }
+    ]
+}

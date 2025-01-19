@@ -150,7 +150,6 @@ if (isset($_GET['function']) && $_GET['function'] === 'logout') {
             <div class="bienvenue">
                 <h1> Bienvenue sur Let's Quizz !</h1>
                 <h3> La meilleure plateforme de quiz en ligne</h3>
-                <a href="index.php?action=quizz" class="start-btn">jouer test</a>
             </div>
             <section class="recherche">
                 <h3>Rechercher un quiz</h3>
@@ -161,13 +160,20 @@ if (isset($_GET['function']) && $_GET['function'] === 'logout') {
             </section>
             <section class="liste-quiz">
                 <h3> Nos derniers quiz </h3>
-                <hr/>
-                <!-- <?php foreach($listeQuizs as $quiz) {
-                    ?>
-                <div class="quiz-card">
-                    <h3><?php echo $quiz['NOMQUIZ']?></h3>
-                </div>
-                <?php }  ?>   -->
+                <?php
+                echo "<form action='index.php?action=importJSON' method='post' enctype='multipart/form-data'>";
+                    echo "<label for='quizzJSON'>Importez votre propre quizz ici</label>";
+                    echo "<input type='file' id='quizzJSON' name='quizzJSON' accept='application/json'/>";
+                    echo "<button type='submit' name='importQuizz'>Importer</button>";
+                echo "</form>";
+                echo "<br/>";
+                echo "<a href='index.php?action=quizz' class='start-btn'>Quizz sur le php</a>";
+                echo "<br/>";
+                echo "<a href='index.php?action=quizz2' class='start-btn'>Quizz sur l'informatique</a>";
+                echo "<br/>";
+                echo "<a href='index.php?action=quizz3' class='start-btn'>Quizz sur la culture génerale</a>";
+                echo "<br/>";
+                ?>
             </section>  
         </main>
     </body>

@@ -1,0 +1,94 @@
+{
+    "QUIZZ": [
+        {
+            "question": "Quelle est la planète la plus proche du Soleil ?",
+            "reponses": [
+                {"proposition": "Mercure", "solution": true},
+                {"proposition": "Vénus", "solution": false},
+                {"proposition": "Terre", "solution": false},
+                {"proposition": "Mars", "solution": false}
+            ]
+        },
+        {
+            "question": "Quel est l'animal terrestre le plus rapide ?",
+            "reponses": [
+                {"proposition": "Guépard", "solution": true},
+                {"proposition": "Antilope", "solution": false},
+                {"proposition": "Lion", "solution": false},
+                {"proposition": "Léopard", "solution": false}
+            ]
+        },
+        {
+            "question": "Qui a écrit 'Les Misérables' ?",
+            "reponses": [
+                {"proposition": "Victor Hugo", "solution": true},
+                {"proposition": "Émile Zola", "solution": false},
+                {"proposition": "Alexandre Dumas", "solution": false},
+                {"proposition": "Gustave Flaubert", "solution": false}
+            ]
+        },
+        {
+            "question": "Combien y a-t-il de joueurs dans une équipe de football sur le terrain ?",
+            "reponses": [
+                {"proposition": "11", "solution": true},
+                {"proposition": "9", "solution": false},
+                {"proposition": "7", "solution": false},
+                {"proposition": "13", "solution": false}
+            ]
+        },
+        {
+            "question": "Quel est l'organe principal du système nerveux ?",
+            "reponses": [
+                {"proposition": "Le cerveau", "solution": true},
+                {"proposition": "Le cœur", "solution": false},
+                {"proposition": "Le foie", "solution": false},
+                {"proposition": "Les reins", "solution": false}
+            ]
+        },
+        {
+            "question": "Quel est le plus grand désert du monde ?",
+            "reponses": [
+                {"proposition": "L'Antarctique", "solution": true},
+                {"proposition": "Le Sahara", "solution": false},
+                {"proposition": "Le désert de Gobi", "solution": false},
+                {"proposition": "Le désert du Kalahari", "solution": false}
+            ]
+        },
+        {
+            "question": "Quelle est la monnaie officielle du Royaume-Uni ?",
+            "reponses": [
+                {"proposition": "Livre sterling", "solution": true},
+                {"proposition": "Euro", "solution": false},
+                {"proposition": "Dollar", "solution": false},
+                {"proposition": "Franc suisse", "solution": false}
+            ]
+        },
+        {
+            "question": "Quel est le plus grand mammifère du monde ?",
+            "reponses": [
+                {"proposition": "Baleine bleue", "solution": true},
+                {"proposition": "Éléphant d'Afrique", "solution": false},
+                {"proposition": "Gorille", "solution": false},
+                {"proposition": "Orque", "solution": false}
+            ]
+        },
+        {
+            "question": "Quel pays est connu comme le pays du Soleil-Levant ?",
+            "reponses": [
+                {"proposition": "Japon", "solution": true},
+                {"proposition": "Chine", "solution": false},
+                {"proposition": "Thaïlande", "solution": false},
+                {"proposition": "Inde", "solution": false}
+            ]
+        },
+        {
+            "question": "Quel est l'ingrédient principal du guacamole ?",
+            "reponses": [
+                {"proposition": "Avocat", "solution": true},
+                {"proposition": "Tomate", "solution": false},
+                {"proposition": "Poivron", "solution": false},
+                {"proposition": "Pomme de terre", "solution": false}
+            ]
+        }
+    ]
+}

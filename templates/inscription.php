@@ -6,14 +6,12 @@ use utils\UserTools;
 if (!empty($_POST['email']) && !empty($_POST['password'])) {
     $register = UserTools::register($_POST['email'], $_POST['password'], $_POST['nom'], $_POST['prenom']);
     if ($register == true) {
-        header('Location : accueil.php');
+        header('Location: accueil.php');
         } else {
-        header('Location : inscription.php?error=1');
+        header('Location: inscription.php?error=1');
         }
 
 }
-
-
 
 ?>
 <!DOCTYPE html>
@@ -80,7 +78,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
         <section class="inscription">
             <div class="form-container">
                 <h1>Inscription</h1>
-                <form action="index.php?action=inscription" method="POST">
+                <form action="index.php?action=connexion" method="POST">
                     <label for="nom">Nom</label>
                     <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
 
@@ -98,6 +96,5 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
             </div>
         </section>
     </main>
-    <?php include('global/footer.php'); ?>
 </body>
 </html>

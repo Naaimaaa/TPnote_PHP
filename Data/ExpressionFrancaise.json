@@ -1,0 +1,94 @@
+{
+    "QUIZZ": [
+        {
+            "question": "Que signifie l'expression 'Tomber dans les pommes' ?",
+            "reponses": [
+                {"proposition": "S'évanouir", "solution": true},
+                {"proposition": "Devenir fou", "solution": false},
+                {"proposition": "Être très fatigué", "solution": false},
+                {"proposition": "Perdre patience", "solution": false}
+            ]
+        },
+        {
+            "question": "Que signifie l'expression 'Poser un lapin' ?",
+            "reponses": [
+                {"proposition": "Ne pas venir à un rendez-vous", "solution": true},
+                {"proposition": "Oublier quelque chose", "solution": false},
+                {"proposition": "Faire une blague", "solution": false},
+                {"proposition": "Mentir", "solution": false}
+            ]
+        },
+        {
+            "question": "Que veut dire 'Avoir le cœur sur la main' ?",
+            "reponses": [
+                {"proposition": "Être généreux", "solution": true},
+                {"proposition": "Être triste", "solution": false},
+                {"proposition": "Aimer la nature", "solution": false},
+                {"proposition": "Être amoureux", "solution": false}
+            ]
+        },
+        {
+            "question": "Que signifie 'Casser du sucre sur le dos de quelqu’un' ?",
+            "reponses": [
+                {"proposition": "Dire du mal de quelqu'un en son absence", "solution": true},
+                {"proposition": "Se moquer gentiment", "solution": false},
+                {"proposition": "Avoir des problèmes de santé", "solution": false},
+                {"proposition": "Faire un compliment", "solution": false}
+            ]
+        },
+        {
+            "question": "Que veut dire 'Donner sa langue au chat' ?",
+            "reponses": [
+                {"proposition": "Abandonner une devinette", "solution": true},
+                {"proposition": "Ne plus parler à quelqu'un", "solution": false},
+                {"proposition": "Ne plus avoir d'idée", "solution": false},
+                {"proposition": "Être timide", "solution": false}
+            ]
+        },
+        {
+            "question": "Quelle est la signification de 'Mettre son grain de sel' ?",
+            "reponses": [
+                {"proposition": "Intervenir sans y être invité", "solution": true},
+                {"proposition": "Être en colère", "solution": false},
+                {"proposition": "Ajouter un élément important", "solution": false},
+                {"proposition": "Faire une mauvaise blague", "solution": false}
+            ]
+        },
+        {
+            "question": "Que signifie 'Faire la pluie et le beau temps' ?",
+            "reponses": [
+                {"proposition": "Avoir beaucoup d'influence", "solution": true},
+                {"proposition": "Changer souvent d'avis", "solution": false},
+                {"proposition": "Être météorologue", "solution": false},
+                {"proposition": "Avoir un comportement lunatique", "solution": false}
+            ]
+        },
+        {
+            "question": "Quelle est la signification de 'Être sur son trente-et-un' ?",
+            "reponses": [
+                {"proposition": "Être bien habillé", "solution": true},
+                {"proposition": "Avoir beaucoup de chance", "solution": false},
+                {"proposition": "Être stressé", "solution": false},
+                {"proposition": "Être en retard", "solution": false}
+            ]
+        },
+        {
+            "question": "Que signifie 'Avoir un poil dans la main' ?",
+            "reponses": [
+                {"proposition": "Être très paresseux", "solution": true},
+                {"proposition": "Être très poilu", "solution": false},
+                {"proposition": "Être stressé", "solution": false},
+                {"proposition": "Être maladroit", "solution": false}
+            ]
+        },
+        {
+            "question": "Que veut dire 'Ne pas être dans son assiette' ?",
+            "reponses": [
+                {"proposition": "Ne pas se sentir bien", "solution": true},
+                {"proposition": "Être gourmand", "solution": false},
+                {"proposition": "Être stressé", "solution": false},
+                {"proposition": "Ne pas avoir faim", "solution": false}
+            ]
+        }
+    ]
+}
