@@ -83,8 +83,9 @@ session_start();
             min-height: 100%;
             object-fit: cover; /* Évite que la vidéo soit déformée */
             overflow: hidden;
+            background-color: #43319D; /* Fond violet si la vidéo ne se charge pas */
         }
-
+      
     </style>
 </head>
 <body>
