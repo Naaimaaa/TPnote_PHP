@@ -168,6 +168,8 @@ namespace global\headerCo
     </nav>
     <div class="user-space" onclick="menuDisplay()">
         <img src="../img/icone.png" alt="icone-user">
-        <p>Mon compte</p>
-    </div>
+        <?php if (isset($_SESSION['user'])): ?>
+            <a href="index.php?action=deconnexion">Déconnexion</a>
+        <?php endif; ?>
+        </div>
 </header>

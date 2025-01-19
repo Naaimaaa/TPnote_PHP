@@ -36,6 +36,9 @@ switch ($action) {
     case 'connexionBD':
         require_once 'connexionBD.php';
         break;
+    case 'deconnexion':
+        require_once 'deconnexion.php';
+        break;
     case 'inscription':
         require_once 'inscription.php';
         break;
