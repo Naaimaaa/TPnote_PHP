@@ -6,13 +6,13 @@ use \PDO;
 class DBConnector {
     private $pdo;
     public function __construct(){
-        $this->pdo = new PDO('sqlite:' . "database.db");
+        $this->pdo = new PDO('sqlite:../DataBase/database.db');
     }
     
     public function getDB(): PDO {
         return $this->pdo;
     }
-    
+
     /**
      * get_utilisateurs, get l'ensemble des utlisateurs de la BD
      *

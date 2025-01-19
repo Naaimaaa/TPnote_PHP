@@ -13,8 +13,6 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
 
 }
 
-
-
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -80,7 +78,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
         <section class="inscription">
             <div class="form-container">
                 <h1>Inscription</h1>
-                <form action="index.php?action=inscription" method="POST">
+                <form action="index.php?action=connexion" method="POST">
                     <label for="nom">Nom</label>
                     <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
 
@@ -98,6 +96,5 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
             </div>
         </section>
     </main>
-    <?php include('global/footer.php'); ?>
 </body>
 </html>

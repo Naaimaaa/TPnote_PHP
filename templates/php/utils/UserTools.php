@@ -68,7 +68,8 @@ class UserTools {
     public static function register($email, $password, $nom, $prenom) {
         $user = self::checkDB($email, $password);
         if(!$user) {
-            $db = new PDO('mysql:host=servinfo-maria;dbname=DBvalin', 'valin', 'valin');
+            $dbConnector = new DBConnector();
+            $db = $dbConnector->getDB();
             $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $hash = hash('sha1', $password);
             $query = $db->prepare('INSERT INTO UTILISATEUR VALUES(:email, :passwrd ,:nom, :prenom)');

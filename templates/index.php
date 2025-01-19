@@ -48,6 +48,9 @@ switch ($action) {
     case 'header':
         require_once 'global/header.php';
         break;
+    case 'footer':
+        require_once 'global/footer.php';
+        break;
     default:
         require_once '404.php';
         break;
