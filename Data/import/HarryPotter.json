@@ -1,0 +1,95 @@
+{
+    "nom" : "Quizz sur Harry Potter",
+    "QUIZZ": [
+        {
+            "question": "Quel est le prénom des parents de Harry Potter ?",
+            "reponses": [
+                {"proposition": "James et Lily", "solution": true},
+                {"proposition": "John et Mary", "solution": false},
+                {"proposition": "Severus et Lily", "solution": false},
+                {"proposition": "Arthur et Molly", "solution": false}
+            ]
+        },
+        {
+            "question": "Quel est le nom du directeur de Poudlard au début de la saga ?",
+            "reponses": [
+                {"proposition": "Albus Dumbledore", "solution": true},
+                {"proposition": "Severus Rogue", "solution": false},
+                {"proposition": "Gellert Grindelwald", "solution": false},
+                {"proposition": "Minerva McGonagall", "solution": false}
+            ]
+        },
+        {
+            "question": "Dans quelle maison de Poudlard est placé Drago Malefoy ?",
+            "reponses": [
+                {"proposition": "Serpentard", "solution": true},
+                {"proposition": "Gryffondor", "solution": false},
+                {"proposition": "Serdaigle", "solution": false},
+                {"proposition": "Poufsouffle", "solution": false}
+            ]
+        },
+        {
+            "question": "Quel est le nom du serpent de Voldemort ?",
+            "reponses": [
+                {"proposition": "Nagini", "solution": true},
+                {"proposition": "Aragog", "solution": false},
+                {"proposition": "Basilic", "solution": false},
+                {"proposition": "Fumseck", "solution": false}
+            ]
+        },
+        {
+            "question": "Quel est le nom du cousin moldu de Harry Potter ?",
+            "reponses": [
+                {"proposition": "Dudley", "solution": true},
+                {"proposition": "Vernon", "solution": false},
+                {"proposition": "Marlon", "solution": false},
+                {"proposition": "Petunia", "solution": false}
+            ]
+        },
+        {
+            "question": "Qui est l'elfe de maison qui aide Harry Potter ?",
+            "reponses": [
+                {"proposition": "Dobby", "solution": true},
+                {"proposition": "Kreattur", "solution": false},
+                {"proposition": "Winky", "solution": false},
+                {"proposition": "Hokey", "solution": false}
+            ]
+        },
+        {
+            "question": "Quel est l'objet qui permet de voyager dans le temps dans 'Le Prisonnier d'Azkaban' ?",
+            "reponses": [
+                {"proposition": "Le Retourneur de Temps", "solution": true},
+                {"proposition": "La Pensine", "solution": false},
+                {"proposition": "Le Portoloin", "solution": false},
+                {"proposition": "La Coupe de Feu", "solution": false}
+            ]
+        },
+        {
+            "question": "Quel est le nom du journal magique dans lequel écrit Rita Skeeter ?",
+            "reponses": [
+                {"proposition": "La Gazette du Sorcier", "solution": true},
+                {"proposition": "Le Chicaneur", "solution": false},
+                {"proposition": "Le Prophète Quotidien", "solution": false},
+                {"proposition": "Le Sorcier Hebdo", "solution": false}
+            ]
+        },
+        {
+            "question": "Qui est l'auteur des livres Harry Potter ?",
+            "reponses": [
+                {"proposition": "JK Rowling", "solution": true},
+                {"proposition": "Stephen King", "solution": false},
+                {"proposition": "Rick Riordan", "solution": false},
+                {"proposition": "Suzanne Collins", "solution": false}
+            ]
+        },
+        {
+            "question": "Quelle est la forme du Patronus de Harry Potter ?",
+            "reponses": [
+                {"proposition": "Un cerf", "solution": true},
+                {"proposition": "Un loup", "solution": false},
+                {"proposition": "Un phénix", "solution": false},
+                {"proposition": "Un hibou", "solution": false}
+            ]
+        }
+    ]
+}
