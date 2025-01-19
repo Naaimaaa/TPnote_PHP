@@ -9,7 +9,7 @@ require_once 'php/utils/DBConnector.php';
 use utils\DBConnector;
 ?>
     <style>
-        /* Styles généraux */
+
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(to right, #6a11cb, #2575fc);
@@ -32,14 +32,14 @@ main {
     text-align: center;
 }
 
-/* Titre principal */
+
 h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
     color: #f39c12;
 }
 
-/* Section des scores */
+
 section {
     text-align: left;
 }
@@ -51,7 +51,7 @@ h2 {
     padding-bottom: 5px;
 }
 
-/* Liste des scores */
+
 li {
     list-style: none;
     background: #34495e;

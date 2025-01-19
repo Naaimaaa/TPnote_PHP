@@ -39,7 +39,7 @@ use utils\DBConnector;
             margin : 10px 0;
         }
         
-        /* Section des quiz */
+
         .liste-quiz {
             margin: 50px auto;
             padding: 20px;
