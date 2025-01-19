@@ -9,6 +9,7 @@ if (isset($_POST['email']) && $_POST['password']) {
     $login = UserTools::login($_POST['email'], $_POST['password']);
     if ($login == true) {
         $_SESSION['user'] = $login;
+        $_SESSION['mail'] = $_POST['email'];
         header('Location: index.php?action=accueil');
         exit();
     } else {

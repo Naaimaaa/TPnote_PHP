@@ -133,11 +133,9 @@ use utils\DBConnector;
             //Affichage du header différent selon connexion ou non 
             if (UserTools::isLogged()) {
                 include 'global/headerCo.php';
-                error_log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
             }
             else {
                 include 'global/header.php';
-                error_log('bbbbbbbbbbbbbbbbbbbbbbbbbbb');
             }
 
          ?>

@@ -164,7 +164,7 @@ namespace global\headerCo
         <div></div>
     </div>
     <nav id="menu">
-        <a href="index.php?action=Mes statistiques" aria-disabled="true"> Statistiques </a>
+        <a href="index.php?action=statistiques" aria-disabled="true"> Mes statistiques </a>
     </nav>
     <div class="user-space" onclick="menuDisplay()">
         <img src="../img/icone.png" alt="icone-user">

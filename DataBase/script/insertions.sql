@@ -16,22 +16,22 @@ VALUES
     ("naomilamb@hotmail.edu","1","Lamb","Naomi");
 
 
-INSERT INTO QUIZ (IDQUIZ, NOMQUIZ)
+INSERT INTO QUIZ (NOMQUIZ)
 VALUES 
-    (1,"QUIZ PHP"),
-    (2,"VIVE LES VACANCES");
+    ("QUIZ PHP"),
+    ("VIVE LES VACANCES");
     
 
-INSERT INTO PARTICIPER (EMAILU, IDQUIZ, POINTS, DATEPART)
+INSERT INTO PARTICIPER (EMAILU, NOMQUIZ, POINTS, DATEPART)
 VALUES
-    ("s.georgia2866@outlook.couk",1,24,"2024-08-26 16:44"),
-    ("gannon_gould@hotmail.edu",1,13,"2025-07-17 03:22"),
-    ("m_macey7223@protonmail.net",2,17,"2024-01-06 15:35"),
-    ("george_frye7231@aol.edu",2,47,"2024-08-28 15:20"),
-    ("chambers_russell1853@protonmail.couk",2,28,"2025-06-07 15:33"),
-    ("hardy.otto4636@yahoo.ca",2,12,"2024-03-04 15:53"),
-    ("naomilamb@hotmail.edu",1,44,"2024-10-30 16:08"),
-    ("naomilamb@hotmail.edu",1,46,"2025-05-18 17:15");
+    ("s.georgia2866@outlook.couk","QUIZ PHP",24,"2024-08-26 16:44"),
+    ("gannon_gould@hotmail.edu","QUIZ PHP",13,"2025-07-17 03:22"),
+    ("m_macey7223@protonmail.net","VIVE LES VACANCES",17,"2024-01-06 15:35"),
+    ("george_frye7231@aol.edu","VIVE LES VACANCES",47,"2024-08-28 15:20"),
+    ("chambers_russell1853@protonmail.couk","VIVE LES VACANCES",28,"2025-06-07 15:33"),
+    ("hardy.otto4636@yahoo.ca","VIVE LES VACANCES",12,"2024-03-04 15:53"),
+    ("naomilamb@hotmail.edu","QUIZ PHP",44,"2024-10-30 16:08"),
+    ("naomilamb@hotmail.edu","QUIZ PHP",46,"2025-05-18 17:15");
 
 
 INSERT INTO QUESTION (NUMQ, INTITULE)
@@ -43,13 +43,13 @@ VALUES
     (5, "Est-ce que je préfère la mer ou la montagne ?");
    
 
-INSERT INTO COMPOSER (NUMQ, IDQUIZ)
+INSERT INTO COMPOSER (NUMQ, NOMQUIZ)
 VALUES
-    (1,1),
-    (2,1),
-    (3,1),
-    (4,2),
-    (5,2);
+    (1,"QUIZ PHP"),
+    (2,"QUIZ PHP"),
+    (3,"QUIZ PHP"),
+    (4,"VIVE LES VACANCES"),
+    (5,"VIVE LES VACANCES");
 
 
 INSERT INTO REPONSE (NUMR, LIBELLE)
