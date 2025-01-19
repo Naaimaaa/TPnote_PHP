@@ -5,9 +5,8 @@ use \PDO;
 
 class DBConnector {
     private $pdo;
-    public function __construct($nombase, $dbuser, $dbpass){
-        $this->pdo= new PDO('mysql:host=servinfo-maria;dbname='.$nombase.'', $dbuser, $dbpass);
-        //$this->pdo= new PDO('mysql:host=;dbname='.$nombase.'', $dbuser, $dbpass);
+    public function __construct(){
+        $this->pdo = new PDO('sqlite:' . "database.db");
     }
     
     /**
@@ -78,9 +77,6 @@ class DBConnector {
         $participations = $stmt->fetchAll();
         return $participations;
     }
-
-    
-
 }
 
 ?>
