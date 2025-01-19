@@ -37,15 +37,6 @@
             ]
         },
         {
-            "question": "Quel est le rôle principal d'un système d'exploitation ?",
-            "reponses": [
-                {"proposition": "Gérer les ressources matérielles et logicielles d'un ordinateur", "solution": true},
-                {"proposition": "Exécuter uniquement les jeux vidéo", "solution": false},
-                {"proposition": "Contrôler uniquement l'affichage à l'écran", "solution": false},
-                {"proposition": "Servir uniquement d'antivirus", "solution": false}
-            ]
-        },
-        {
             "question": "Que signifie l'acronyme HTML ?",
             "reponses": [
                 {"proposition": "HyperText Markup Language", "solution": true},
