@@ -33,8 +33,9 @@ use Classes\Reponse;
                 border-radius: 12px;
                 padding: 25px;
                 margin: auto;
-                width: 50%;
+                width: 80%; /* Augmenter la largeur pour placer les éléments correctement */
                 box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+                text-align: left; /* Aligner le texte à gauche */
             }
 
             /* Titre */
@@ -42,7 +43,7 @@ use Classes\Reponse;
                 font-size: 4.5em;
                 margin-bottom: 25px;
                 color: #ffffff;
-
+                text-align: center;
             }
 
             /* Labels et questions */
@@ -54,13 +55,15 @@ use Classes\Reponse;
 
             /* Conteneur pour chaque question et ses réponses */
             .lesReponses {
+                display: flex;
+                flex-direction: column;
                 align-items: flex-start;
                 margin-bottom: 20px;
             }
-            
+
             /* Style des questions */
             .question {
-                font-size: 1.3em;
+                font-size: 1.5em;
                 font-weight: bold;
                 text-align: left;
                 margin-bottom: 10px;
@@ -76,6 +79,12 @@ use Classes\Reponse;
                 font-size: 1.2em;
                 text-align: center;
                 margin-right: 10px;
+            }
+
+            /* Style des réponses */
+            .reponse {
+                font-size: 1.2em;
+                margin-left: 15px;
             }
 
             /* Boutons */
@@ -99,6 +108,7 @@ use Classes\Reponse;
             .submit-btn:hover {
                 background: #0086c3;
             }
+
 
         </style>
     </head>
