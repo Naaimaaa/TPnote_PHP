@@ -19,6 +19,19 @@ use Classes\Reponse;
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Resultat</title>
         <style>
+        h2, h3 {
+            color: #333;
+            font-size: 1.4em;
+            margin-bottom: 0.5em;
+        }
+
+        a {
+            text-decoration: none;
+            color: #43319D;
+            font-weight: bold;
+        }
+
+
         </style>
     </head>
     <body>
