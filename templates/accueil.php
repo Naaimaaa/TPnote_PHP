@@ -17,6 +17,7 @@ use utils\DBConnector;
     include 'global/head.php';
 ?>
     <style>
+        <!-- CSS fait à l'aide de chatgpt -->
         .bienvenue {
             text-align: center;
             background-color: #392989;
