@@ -11,7 +11,7 @@ use utils\UserTools;
 <?php include('global/head.php'); ?>
 <style>
     main {
-        diinscription':
+        display: flex;
         justify-content: center;
         align-items: center;
         padding: 5%;
@@ -38,7 +38,7 @@ use utils\UserTools;
     form {
         display: flex;
         flex-direction: column;
-        width : 352px;
+        width : 350px;
     }
 
     form label {
