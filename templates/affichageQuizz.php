@@ -59,7 +59,7 @@ use Classes\Reponse;
             cursor: pointer;
             display: block;
             margin-top: 20px;
-            margin: 10px auto;  /* Centrer horizontalement avec marge automatique */
+            margin: 10px auto; 
         }
     </style>
     <body>
