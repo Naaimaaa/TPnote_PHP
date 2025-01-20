@@ -172,7 +172,6 @@ namespace global\header
         <div><a href="index.php?action=inscription">S'inscrire</a></div>
     </div>
     <div class="user-space" onclick="menuDisplay()">
-        <img src="../img/icone.png" alt="icone-user">
         <p>S'identifier</p>
     </div>
 </header>

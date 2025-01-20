@@ -113,6 +113,13 @@ namespace global\headerCo
         flex-direction: column;
     }
 
+    .logo a, .user-space a {
+        text-decoration: none;
+        color : white;
+        font-size: 16px;
+        transition: font-weight 0.3s ease;
+    }
+
     @media (max-width: 768px) {
         nav {
             display: none; /* Cache le menu par défaut */
@@ -154,9 +161,7 @@ namespace global\headerCo
 </script>
 <header>
     <div class="logo">
-        <a href="index.php?action=accueil">
-            <img src="#" alt="logo">
-        </a>
+        <a href="index.php?action=accueil">Accueil</a>
     </div>
     <div class="burger-menu" onclick="toggleMenu()">
         <div></div>
@@ -167,7 +172,6 @@ namespace global\headerCo
         <a href="index.php?action=statistiques" aria-disabled="true"> Mes statistiques </a>
     </nav>
     <div class="user-space" onclick="menuDisplay()">
-        <img src="../img/icone.png" alt="icone-user">
         <?php if (isset($_SESSION['user']));
             echo "<a href='index.php?action=deconnexion'>Déconnexion</a>";
         ?>
